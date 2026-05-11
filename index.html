@@ -14,20 +14,23 @@ color:white;
 overflow-x:hidden;
 }
 
-/* TOP NAV */
-nav{
+/* HEADER */
+header{
 position:sticky;
 top:0;
-display:flex;
-justify-content:space-between;
-padding:16px 22px;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(18px);
+display:flex;
+justify-content:space-between;
+padding:14px 22px;
 border-bottom:1px solid rgba(255,255,255,0.08);
 z-index:10;
 }
 
-nav span{font-weight:600;}
+header div{
+font-weight:600;
+}
+
 nav a{
 color:#aaa;
 margin-left:16px;
@@ -39,19 +42,18 @@ nav a:hover{color:#00d5ff;}
 /* HERO */
 .hero{
 text-align:center;
-padding:90px 20px 40px;
+padding:70px 20px 20px;
 }
 
 .hero h1{
 font-size:44px;
 margin:0;
-letter-spacing:-1px;
 }
 
 .hero p{
 color:#888;
-max-width:850px;
-margin:18px auto;
+max-width:900px;
+margin:10px auto;
 line-height:1.6;
 }
 
@@ -61,7 +63,7 @@ max-width:1200px;
 margin:auto;
 padding:20px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
 gap:18px;
 }
 
@@ -71,8 +73,8 @@ background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:18px;
 padding:16px;
-transition:0.3s;
 cursor:pointer;
+transition:0.3s;
 }
 
 .card:hover{
@@ -81,42 +83,34 @@ border-color:#00d5ff;
 }
 
 .icon{
-width:56px;
-height:56px;
-border-radius:14px;
+width:55px;
+height:55px;
+border-radius:12px;
 overflow:hidden;
 background:#111;
 }
 
-.icon img{
-width:100%;
-height:100%;
-}
+.icon img{width:100%;height:100%;}
 
 .title{margin-top:10px;font-weight:600;}
 .sub{color:#00d5ff;font-size:12px;}
 .meta{color:#777;font-size:11px;margin-top:6px;}
-
-/* DETAILS */
-.details{
-color:#999;
-font-size:12px;
-margin-top:6px;
-line-height:1.4;
-}
+.small{color:#666;font-size:11px;margin-top:6px;}
 
 /* MODAL */
 .modal{
 display:none;
 position:fixed;
 inset:0;
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 justify-content:center;
 align-items:center;
 }
 
 .box{
-width:420px;
+width:520px;
+max-height:85vh;
+overflow:auto;
 background:#111;
 border-radius:14px;
 padding:20px;
@@ -125,7 +119,7 @@ border:1px solid rgba(255,255,255,0.1);
 
 button{
 width:100%;
-margin-top:12px;
+margin-top:10px;
 padding:12px;
 border:none;
 border-radius:10px;
@@ -135,33 +129,33 @@ font-weight:600;
 cursor:pointer;
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#666;
-font-size:12px;
+/* SECTIONS */
+.section{
+max-width:1100px;
+margin:auto;
+padding:30px 20px;
+color:#aaa;
+font-size:13px;
+line-height:1.6;
 }
 
-/* smooth scroll */
-html{scroll-behavior:smooth;}
 </style>
 </head>
 
 <body>
 
+<header>
+<div>Orvexa Ecosystem</div>
 <nav>
-<span>Orvexa Ecosystem</span>
-<div>
 <a href="#apps">Apps</a>
 <a href="#privacy">Privacy</a>
 <a href="#contact">Contact</a>
-</div>
 </nav>
+</header>
 
 <section class="hero">
 <h1>Orvexa Application Ecosystem</h1>
-<p>Official developer portal for Orvexa Apps on Amazon Appstore.
-Real-time apps, optimized performance, and unified ecosystem experience.</p>
+<p>Official Amazon Appstore developer portal for Android, Fire TV, and Fire Tablets applications with optimized performance and modern UX.</p>
 </section>
 
 <section class="grid" id="apps"></section>
@@ -169,67 +163,117 @@ Real-time apps, optimized performance, and unified ecosystem experience.</p>
 <!-- MODAL -->
 <div class="modal" id="modal">
 <div class="box">
-<h3 id="name"></h3>
+
+<h2 id="name"></h2>
+<p id="subtitle" style="color:#00d5ff"></p>
+
 <p id="desc"></p>
-<p style="color:#777;font-size:12px">
+
+<div id="features" style="margin-top:10px;color:#bbb;font-size:12px"></div>
+
+<p style="color:#777;font-size:11px;margin-top:10px">
 ASIN: <span id="asin"></span>
 </p>
-<button id="open">Open Amazon Store</button>
+
+<button id="openBtn">Open Amazon Store</button>
+
 </div>
 </div>
 
 <!-- PRIVACY -->
-<section id="privacy" style="padding:40px;text-align:center;color:#aaa">
+<section id="privacy" class="section">
 <h3>Privacy & Advertising</h3>
-<p>Start.io and analytics systems are used for monetization and ecosystem optimization.</p>
+<p>
+Orvexa Apps may use advertising technologies (Start.io and partners) and analytics to improve performance, stability, and ecosystem development.
+All user data remains on device unless explicitly required by service features.
+</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="text-align:center;padding:30px">
-<button onclick="window.location.href='mailto:orvexaapps@gmail.com?subject=Orvexa Support Request'">
+<section id="contact" class="section" style="text-align:center">
+<button onclick="window.location.href='mailto:orvexaapps@gmail.com?subject=Orvexa Support'">
 Contact Developer
 </button>
 </section>
 
-<footer>© 2026 Orvexa Apps Ecosystem</footer>
-
 <script>
 
-/* 🔥 SINGLE SOURCE DATA (READY FOR AMAZON AUTO SYNC) */
+/* 🔥 YOUR REAL AMAZON METADATA SYSTEM */
 const apps = [
 {
 name:"Orvexa Files",
+subtitle:"Advanced File Manager",
 asin:"B0F6D8GJTP",
 icon:"icons/files.png",
-desc:"Advanced file manager with APK installer and TV support.",
+desc:"Fast and easy file manager with offline support.",
+features:[
+"Fast file manager",
+"Create/rename/delete files",
+"Built-in audio player",
+"Supports multiple formats",
+"Works offline"
+],
 store:"https://www.amazon.com/gp/product/B0F6D8GJTP"
 },
 {
-name:"Orvexa Files Pro",
-asin:"B0GX37331H",
-icon:"icons/filespro.png",
-desc:"Premium file engine with optimized performance layer.",
-store:"https://www.amazon.com/gp/product/B0GX37331H"
-},
-{
-name:"Media Player",
+name:"Orvexa Media Player",
+subtitle:"Local Media Player",
 asin:"B0DRNNVN1H",
 icon:"icons/media.png",
-desc:"High performance video playback engine.",
+desc:"Modern media player for Android and Fire TV.",
+features:[
+"Play music and videos",
+"Fire TV optimized",
+"All formats supported",
+"Clean UI",
+"No accounts required"
+],
 store:"https://www.amazon.com/gp/product/B0DRNNVN1H"
 },
 {
-name:"Playlist Player",
+name:"Orvexa Files Pro",
+subtitle:"Premium File System",
+asin:"B0GX37331H",
+icon:"icons/filespro.png",
+desc:"Premium ad-free file manager with advanced tools.",
+features:[
+"No Ads version",
+"Copy/move/rename/delete",
+"PDF viewer",
+"ZIP support",
+"APK installer",
+"Fire TV support"
+],
+store:"https://www.amazon.com/gp/product/B0GX37331H"
+},
+{
+name:"Orvexa Playlist Player",
+subtitle:"Playlist Engine",
 asin:"B0CWS28SXJ",
 icon:"icons/playlist.png",
-desc:"Smart playlist streaming system.",
+desc:"Local playlist-based media player.",
+features:[
+"Play local media",
+"Create playlists",
+"Fast performance",
+"Fire TV optimized",
+"No subscription"
+],
 store:"https://www.amazon.com/gp/product/B0CWS28SXJ"
 },
 {
 name:"Orvexa Radio",
+subtitle:"Global Radio Streaming",
 asin:"B0GTS87KSZ",
 icon:"icons/radio.png",
-desc:"Global radio streaming platform.",
+desc:"Worldwide radio streaming app.",
+features:[
+"Thousands of stations",
+"Favorites system",
+"Search by country",
+"Background playback",
+"Fire TV optimized"
+],
 store:"https://www.amazon.com/gp/product/B0GTS87KSZ"
 }
 ];
@@ -238,32 +282,38 @@ const grid=document.getElementById("apps");
 const modal=document.getElementById("modal");
 
 apps.forEach(a=>{
-let d=document.createElement("div");
-d.className="card";
+let c=document.createElement("div");
+c.className="card";
 
-d.innerHTML=`
+c.innerHTML=`
 <div class="icon"><img src="${a.icon}"></div>
 <div class="title">${a.name}</div>
-<div class="sub">${a.asin}</div>
-<div class="details">${a.desc}</div>
+<div class="sub">${a.subtitle}</div>
+<div class="small">${a.asin}</div>
 `;
 
-d.onclick=()=>{
+c.onclick=()=>{
+
 document.getElementById("name").innerText=a.name;
+document.getElementById("subtitle").innerText=a.subtitle;
 document.getElementById("desc").innerText=a.desc;
 document.getElementById("asin").innerText=a.asin;
 
-document.getElementById("open").onclick=()=>{
+document.getElementById("features").innerHTML =
+"<b>Features:</b><br>• " + a.features.join("<br>• ");
+
+document.getElementById("openBtn").onclick=()=>{
 window.open(a.store,"_blank");
 };
 
 modal.style.display="flex";
 };
 
-grid.appendChild(d);
+grid.appendChild(c);
 });
 
 modal.onclick=()=>modal.style.display="none";
+
 </script>
 
 </body>
