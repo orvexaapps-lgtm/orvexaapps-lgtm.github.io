@@ -1,9 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orvexa Apps</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+}
+
+body{
+  background:#07080a;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* PREMIUM BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,160,255,0.18), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(0,255,170,0.12), transparent 40%);
+  z-index:-1;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(25px);
+  background:rgba(0,0,0,0.6);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:100;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 24px;
+}
+
+.logo{
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+.nav a{
+  color:#aaa;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#00d5ff;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px 50px;
+}
+
+.hero h1{
+  font-size:44px;
+  font-weight:700;
+  letter-spacing:-0.5px;
+}
+
+.hero p{
+  max-width:750px;
+  margin:12px auto;
+  color:#aaa;
+  line-height:1.6;
+  font-size:15px;
+}
+
+/* SECTION TITLE */
+.section-title{
+  max-width:1200px;
+  margin:50px auto 10px;
+  padding:0 20px;
+  font-size:12px;
+  color:#777;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* GRID */
+.grid{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+/* CARD (RESTORED PREMIUM LOOK) */
+.card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:18px;
+  cursor:pointer;
+  transition:0.35s;
+  backdrop-filter:blur(18px);
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(0,200,255,0.4);
+  box-shadow:0 10px 40px rgba(0,200,255,0.08);
+}
+
+/* ICON */
+.icon{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  overflow:hidden;
+  background:#111;
+  margin-bottom:12px;
+}
+
+.icon img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TEXT */
+.title{
+  font-size:15px;
+  font-weight:600;
+}
+
+.sub{
+  font-size:12px;
+  color:#00d5ff;
+  margin-top:3px;
+}
+
+.desc{
+  font-size:12px;
+  color:#aaa;
+  margin-top:10px;
+  line-height:1.5;
+}
+
+/* CONTACT CARD (IMPROVED UX) */
+.contact-card{
+  max-width:900px;
+  margin:60px auto;
+  padding:20px;
+  border-radius:16px;
+  background:rgba(0,255,180,0.06);
+  border:1px solid rgba(0,255,180,0.15);
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-card:hover{
+  transform:scale(1.02);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#666;
+  border-top:1px solid rgba(255,255,255,0.06);
+  margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Orvexa Apps</div>
+    <div>
+      <a href="#apps">Apps</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+      <a href="app-ads.txt" target="_blank">app-ads.txt</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Orvexa Application Ecosystem</h1>
+  <p>Performance-focused Android & Fire TV applications with stable architecture and optimized user experience.</p>
+</section>
+
+<div class="section-title">Applications</div>
+
+<section class="grid" id="apps">
+
+  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0F6D8GJTP')">
+    <div class="icon"><img src="orvexa_files.png"></div>
+    <div class="title">Orvexa Files</div>
+    <div class="sub">File Manager</div>
+    <div class="desc">Advanced file browsing, APK install and TV navigation.</div>
+  </div>
+
+  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0GX37331H')">
+    <div class="icon"><img src="orvexa_files_pro.png"></div>
+    <div class="title">Orvexa Files Pro</div>
+    <div class="sub">Premium File System</div>
+    <div class="desc">Enhanced performance, optimized storage handling.</div>
+  </div>
+
+  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0DRNNVN1H')">
+    <div class="icon"><img src="media.png"></div>
+    <div class="title">Media Player</div>
+    <div class="sub">Playback Engine</div>
+    <div class="desc">Smooth video playback optimized for TV.</div>
+  </div>
+
+  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0CWS28SXJ')">
+    <div class="icon"><img src="playlist.png"></div>
+    <div class="title">Playlist Player</div>
+    <div class="sub">Streaming</div>
+    <div class="desc">Organized playlist-based playback system.</div>
+  </div>
+
+  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0GTS87KSZ')">
+    <div class="icon"><img src="radio.png"></div>
+    <div class="title">Orvexa Radio</div>
+    <div class="sub">Streaming Audio</div>
+    <div class="desc">Lightweight global radio streaming app.</div>
+  </div>
+
+</section>
+
+<div class="section-title">Privacy</div>
+
+<section id="privacy" class="contact-card">
+  Some applications use advertising and analytics services to support free usage.
+</section>
+
+<div class="section-title">Contact</div>
+
+<section id="contact" class="contact-card" onclick="mail()">
+  Click here to contact Orvexa Developer Support
+</section>
+
+<footer>
+© 2026 Orvexa Apps • Developer Portal
+</footer>
+
+<script>
+function openApp(url){
+  window.open(url,"_blank");
+}
+
+function mail(){
+  window.location.href="mailto:orvexaapps@gmail.com?subject=Support%20Request";
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Orvexa Developer Portal</title>
+<title>Orvexa Apps</title>
 
 <style>
 *{
