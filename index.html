@@ -9,53 +9,44 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
-  background:#07080c;
-  color:#fff;
-  overflow-x:hidden;
+  background:#0a0c12;
+  color:white;
 }
 
-/* HEADER */
 header{
   position:sticky;
   top:0;
-  backdrop-filter:blur(22px);
+  backdrop-filter:blur(20px);
   background:rgba(0,0,0,0.55);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-  z-index:100;
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
+  padding:14px 20px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  padding:14px 20px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.nav a{
+nav a{
   color:#aaa;
   text-decoration:none;
   margin-left:14px;
   font-size:13px;
 }
-.nav a:hover{color:#00d5ff;}
 
-/* HERO */
+nav a:hover{color:#00d5ff;}
+
 .hero{
   text-align:center;
-  padding:90px 20px 40px;
+  padding:80px 20px 30px;
 }
 
 .hero h1{
-  font-size:44px;
+  font-size:42px;
   margin:0;
 }
 
 .hero p{
-  color:#999;
+  color:#888;
   max-width:800px;
-  margin:10px auto;
+  margin:auto;
 }
 
 /* GRID */
@@ -63,20 +54,18 @@ header{
   max-width:1200px;
   margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:16px;
   padding:20px;
 }
 
-/* CARD */
 .card{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
   border-radius:18px;
   padding:16px;
   cursor:pointer;
-  transition:0.35s;
-  backdrop-filter:blur(16px);
+  transition:0.3s;
 }
 
 .card:hover{
@@ -84,11 +73,10 @@ header{
   border-color:#00d5ff;
 }
 
-/* ICON */
 .icon{
-  width:54px;
-  height:54px;
-  border-radius:14px;
+  width:55px;
+  height:55px;
+  border-radius:12px;
   overflow:hidden;
   background:#111;
 }
@@ -96,13 +84,11 @@ header{
 .icon img{
   width:100%;
   height:100%;
-  object-fit:cover;
 }
 
-/* TEXT */
 .title{margin-top:10px;font-weight:600;}
 .sub{color:#00d5ff;font-size:12px;}
-.desc{color:#aaa;font-size:12px;margin-top:8px;line-height:1.5}
+.desc{color:#aaa;font-size:12px;margin-top:6px;}
 
 /* MODAL */
 .modal{
@@ -110,17 +96,16 @@ header{
   position:fixed;
   inset:0;
   background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(12px);
   justify-content:center;
   align-items:center;
 }
 
-.modal-box{
-  width:360px;
-  background:#111318;
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:18px;
+.box{
+  width:380px;
+  background:#111;
+  border-radius:16px;
   padding:20px;
+  border:1px solid rgba(255,255,255,0.1);
 }
 
 .close{
@@ -129,13 +114,10 @@ header{
   color:#aaa;
 }
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:30px;
   color:#666;
-  border-top:1px solid rgba(255,255,255,0.06);
-  margin-top:40px;
 }
 </style>
 </head>
@@ -143,100 +125,90 @@ footer{
 <body>
 
 <header>
-  <div class="nav">
-    <div>Orvexa Developer Portal</div>
-    <div>
-      <a href="#apps">Apps</a>
-      <a href="app-ads.txt">Ads</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+  <div>Orvexa Developer Portal</div>
+  <nav>
+    <a href="#apps">Apps</a>
+    <a href="app-ads.txt">Ads</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h1>Orvexa Ecosystem</h1>
-  <p>Official developer platform for Android and Fire TV applications.</p>
+  <h1>Orvexa Application Ecosystem</h1>
+  <p>Official Amazon Appstore developer portal for Android and Fire TV applications.</p>
 </section>
 
-<section class="grid" id="apps">
+<section class="grid">
 
-  <div class="card" onclick="openModal('Orvexa Files','File Manager','Advanced file tools and APK installer','https://www.amazon.com/gp/product/B0F6D8GJTP')">
-    <div class="icon"><img src="icons/orvexa-files.png"></div>
+  <div class="card" onclick="openApp('Orvexa Files','B0F6D8GJTP')">
+    <div class="icon"><img src="icons/files.png"></div>
     <div class="title">Orvexa Files</div>
-    <div class="sub">File Manager</div>
-    <div class="desc">Storage browser + APK installer</div>
+    <div class="sub">B0F6D8GJTP</div>
+    <div class="desc">File Manager + APK Installer</div>
   </div>
 
-  <div class="card" onclick="openModal('Orvexa Files Pro','Premium File Manager','Advanced performance file system','https://www.amazon.com/gp/product/B0GX37331H')">
-    <div class="icon"><img src="icons/orvexa-files-pro.png"></div>
+  <div class="card" onclick="openApp('Files Pro','B0GX37331H')">
+    <div class="icon"><img src="icons/filespro.png"></div>
     <div class="title">Orvexa Files Pro</div>
     <div class="sub">Premium</div>
-    <div class="desc">Advanced file optimization engine</div>
+    <div class="desc">Advanced file engine system</div>
   </div>
 
-  <div class="card" onclick="openModal('Media Player','Video Player','Optimized playback engine','https://www.amazon.com/gp/product/B0DRNNVN1H')">
-    <div class="icon"><img src="icons/media-player.png"></div>
+  <div class="card" onclick="openApp('Media Player','B0DRNNVN1H')">
+    <div class="icon"><img src="icons/media.png"></div>
     <div class="title">Media Player</div>
-    <div class="sub">Playback</div>
-    <div class="desc">Smooth video playback system</div>
+    <div class="sub">Video Engine</div>
+    <div class="desc">Smooth playback system</div>
   </div>
 
-  <div class="card" onclick="openModal('Playlist Player','Streaming','Playlist based playback','https://www.amazon.com/gp/product/B0CWS28SXJ')">
+  <div class="card" onclick="openApp('Playlist Player','B0CWS28SXJ')">
     <div class="icon"><img src="icons/playlist.png"></div>
     <div class="title">Playlist Player</div>
     <div class="sub">Streaming</div>
     <div class="desc">Smart playlist navigation</div>
   </div>
 
-  <div class="card" onclick="openModal('Orvexa Radio','Audio Streaming','Global radio platform','https://www.amazon.com/gp/product/B0GTS87KSZ')">
+  <div class="card" onclick="openApp('Orvexa Radio','B0GTS87KSZ')">
     <div class="icon"><img src="icons/radio.png"></div>
     <div class="title">Orvexa Radio</div>
-    <div class="sub">Radio</div>
-    <div class="desc">Lightweight streaming radio</div>
+    <div class="sub">Audio</div>
+    <div class="desc">Global radio streaming</div>
   </div>
 
 </section>
 
 <section id="privacy" style="text-align:center;padding:40px;color:#aaa;">
 Privacy & Advertising<br><br>
-Start.io + analytics may be used for ecosystem performance and monetization.
+Start.io + analytics integration used for monetization and ecosystem improvement.
 </section>
 
 <section id="contact" style="text-align:center;padding:30px;">
-<button onclick="location.href='mailto:orvexaapps@gmail.com?subject=Developer Support'"
-style="padding:12px 18px;border-radius:10px;border:none;background:#00d5ff;color:black;font-weight:600;">
-Contact Developer
+<button onclick="location.href='mailto:orvexaapps@gmail.com?subject=Support'"
+style="padding:12px 18px;border-radius:10px;border:none;background:#00d5ff;color:black;">
+Contact Support
 </button>
 </section>
 
-<footer>
-© 2026 Orvexa Apps
-</footer>
+<footer>© 2026 Orvexa Apps</footer>
 
 <!-- MODAL -->
 <div class="modal" id="modal">
-  <div class="modal-box">
-    <div class="close" onclick="closeModal()">✕</div>
-    <h3 id="m-title"></h3>
-    <p id="m-sub"></p>
-    <p id="m-desc" style="color:#aaa"></p>
-    <button id="m-link" style="margin-top:10px;padding:10px;border:none;border-radius:10px;background:#00d5ff;color:black;width:100%;">
-      Open Amazon
-    </button>
+  <div class="box">
+    <div class="close" onclick="closeApp()">✕</div>
+    <h3 id="t"></h3>
+    <p id="a"></p>
   </div>
 </div>
 
 <script>
-function openModal(t,s,d,l){
+function openApp(name, asin){
   document.getElementById("modal").style.display="flex";
-  document.getElementById("m-title").innerText=t;
-  document.getElementById("m-sub").innerText=s;
-  document.getElementById("m-desc").innerText=d;
-  document.getElementById("m-link").onclick=()=>window.open(l,"_blank");
+  document.getElementById("t").innerText=name;
+  document.getElementById("a").innerText="ASIN: " + asin;
 }
 
-function closeModal(){
+function closeApp(){
   document.getElementById("modal").style.display="none";
 }
 </script>
