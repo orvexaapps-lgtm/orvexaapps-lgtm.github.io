@@ -1,94 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orvexa Developer Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orvexa SaaS Console</title>
 
 <style>
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
-  background:#0a0c12;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI;
+  background:#0b0d12;
   color:white;
 }
 
-header{
-  position:sticky;
-  top:0;
-  backdrop-filter:blur(20px);
-  background:rgba(0,0,0,0.55);
-  padding:14px 20px;
+/* TOP BAR */
+.topbar{
   display:flex;
   justify-content:space-between;
+  padding:14px 20px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-nav a{
-  color:#aaa;
-  text-decoration:none;
-  margin-left:14px;
-  font-size:13px;
-}
-
-nav a:hover{color:#00d5ff;}
-
-.hero{
-  text-align:center;
-  padding:80px 20px 30px;
-}
-
-.hero h1{
-  font-size:42px;
-  margin:0;
-}
-
-.hero p{
-  color:#888;
-  max-width:800px;
-  margin:auto;
+.title{
+  font-weight:600;
 }
 
 /* GRID */
 .grid{
   max-width:1200px;
   margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:16px;
   padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
 }
 
+/* CARD */
 .card{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
-  border-radius:18px;
-  padding:16px;
+  border-radius:16px;
+  padding:14px;
   cursor:pointer;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-5px);
   border-color:#00d5ff;
 }
 
 .icon{
-  width:55px;
-  height:55px;
+  width:50px;
+  height:50px;
   border-radius:12px;
   overflow:hidden;
-  background:#111;
 }
 
-.icon img{
-  width:100%;
-  height:100%;
-}
+.icon img{width:100%;height:100%;}
 
-.title{margin-top:10px;font-weight:600;}
-.sub{color:#00d5ff;font-size:12px;}
-.desc{color:#aaa;font-size:12px;margin-top:6px;}
+.name{margin-top:10px;font-weight:600;}
+.meta{color:#00d5ff;font-size:12px;}
+.desc{color:#888;font-size:12px;margin-top:6px;}
 
 /* MODAL */
 .modal{
@@ -103,114 +78,65 @@ nav a:hover{color:#00d5ff;}
 .box{
   width:380px;
   background:#111;
-  border-radius:16px;
   padding:20px;
-  border:1px solid rgba(255,255,255,0.1);
-}
-
-.close{
-  float:right;
-  cursor:pointer;
-  color:#aaa;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#666;
+  border-radius:14px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div>Orvexa Developer Portal</div>
-  <nav>
-    <a href="#apps">Apps</a>
-    <a href="app-ads.txt">Ads</a>
-    <a href="#privacy">Privacy</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<div class="topbar">
+  <div class="title">Orvexa SaaS Console</div>
+  <div>Developer Dashboard</div>
+</div>
 
-<section class="hero">
-  <h1>Orvexa Application Ecosystem</h1>
-  <p>Official Amazon Appstore developer portal for Android and Fire TV applications.</p>
-</section>
+<div class="grid" id="grid"></div>
 
-<section class="grid">
-
-  <div class="card" onclick="openApp('Orvexa Files','B0F6D8GJTP')">
-    <div class="icon"><img src="icons/files.png"></div>
-    <div class="title">Orvexa Files</div>
-    <div class="sub">B0F6D8GJTP</div>
-    <div class="desc">File Manager + APK Installer</div>
-  </div>
-
-  <div class="card" onclick="openApp('Files Pro','B0GX37331H')">
-    <div class="icon"><img src="icons/filespro.png"></div>
-    <div class="title">Orvexa Files Pro</div>
-    <div class="sub">Premium</div>
-    <div class="desc">Advanced file engine system</div>
-  </div>
-
-  <div class="card" onclick="openApp('Media Player','B0DRNNVN1H')">
-    <div class="icon"><img src="icons/media.png"></div>
-    <div class="title">Media Player</div>
-    <div class="sub">Video Engine</div>
-    <div class="desc">Smooth playback system</div>
-  </div>
-
-  <div class="card" onclick="openApp('Playlist Player','B0CWS28SXJ')">
-    <div class="icon"><img src="icons/playlist.png"></div>
-    <div class="title">Playlist Player</div>
-    <div class="sub">Streaming</div>
-    <div class="desc">Smart playlist navigation</div>
-  </div>
-
-  <div class="card" onclick="openApp('Orvexa Radio','B0GTS87KSZ')">
-    <div class="icon"><img src="icons/radio.png"></div>
-    <div class="title">Orvexa Radio</div>
-    <div class="sub">Audio</div>
-    <div class="desc">Global radio streaming</div>
-  </div>
-
-</section>
-
-<section id="privacy" style="text-align:center;padding:40px;color:#aaa;">
-Privacy & Advertising<br><br>
-Start.io + analytics integration used for monetization and ecosystem improvement.
-</section>
-
-<section id="contact" style="text-align:center;padding:30px;">
-<button onclick="location.href='mailto:orvexaapps@gmail.com?subject=Support'"
-style="padding:12px 18px;border-radius:10px;border:none;background:#00d5ff;color:black;">
-Contact Support
-</button>
-</section>
-
-<footer>© 2026 Orvexa Apps</footer>
-
-<!-- MODAL -->
 <div class="modal" id="modal">
   <div class="box">
-    <div class="close" onclick="closeApp()">✕</div>
-    <h3 id="t"></h3>
-    <p id="a"></p>
+    <h3 id="n"></h3>
+    <p id="d"></p>
+    <button id="btn" style="padding:10px;background:#00d5ff;border:none;width:100%;border-radius:10px;">
+      Open Store
+    </button>
   </div>
 </div>
 
 <script>
-function openApp(name, asin){
-  document.getElementById("modal").style.display="flex";
-  document.getElementById("t").innerText=name;
-  document.getElementById("a").innerText="ASIN: " + asin;
-}
+fetch("apps.json")
+.then(r=>r.json())
+.then(data=>{
+  const grid=document.getElementById("grid");
 
-function closeApp(){
+  data.apps.forEach(app=>{
+    let div=document.createElement("div");
+    div.className="card";
+
+    div.innerHTML=`
+      <div class="icon"><img src="${app.icon}"></div>
+      <div class="name">${app.name}</div>
+      <div class="meta">${app.asin}</div>
+      <div class="desc">${app.desc}</div>
+    `;
+
+    div.onclick=()=>{
+      document.getElementById("modal").style.display="flex";
+      document.getElementById("n").innerText=app.name;
+      document.getElementById("d").innerText=app.desc;
+
+      document.getElementById("btn").onclick=()=>{
+        window.open(app.store,"_blank");
+      };
+    };
+
+    grid.appendChild(div);
+  });
+});
+
+document.getElementById("modal").onclick=()=> {
   document.getElementById("modal").style.display="none";
-}
+};
 </script>
 
 </body>
