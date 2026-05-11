@@ -8,7 +8,7 @@
 <style>
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background: radial-gradient(circle at top, #0b1220, #07090d);
 color:#fff;
 }
@@ -25,25 +25,15 @@ backdrop-filter:blur(22px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-nav a{
-color:#aaa;
-margin-left:14px;
-text-decoration:none;
-font-size:13px;
-}
-nav a:hover{color:#00d5ff;}
-
 /* HERO */
 .hero{
 text-align:center;
 padding:90px 20px;
-background: radial-gradient(circle at center, rgba(0,213,255,0.18), transparent 60%);
 }
 
 .hero h1{
 font-size:44px;
-margin:0;
-background: linear-gradient(90deg,#00d5ff,#7c5cff);
+background:linear-gradient(90deg,#00d5ff,#7c5cff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -52,20 +42,16 @@ background: linear-gradient(90deg,#00d5ff,#7c5cff);
 color:#8a8f98;
 max-width:820px;
 margin:auto;
-margin-top:12px;
 line-height:1.7;
 }
 
-/* SECTION */
+/* GRID */
 .section{
 max-width:1100px;
 margin:auto;
 padding:70px 20px;
 }
 
-h2{margin-bottom:20px;}
-
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -80,7 +66,6 @@ padding:18px;
 border-radius:16px;
 cursor:pointer;
 transition:0.3s;
-position:relative;
 }
 
 .card:hover{
@@ -88,21 +73,17 @@ transform:translateY(-6px);
 border-color:#00d5ff;
 }
 
-/* BUTTON INSIDE CARD */
-.btn{
+/* BADGES */
+.badge{
 display:inline-block;
-margin-top:10px;
-padding:8px 12px;
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
-color:#000;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-font-size:12px;
+font-size:11px;
+padding:4px 8px;
+border-radius:6px;
+margin-top:6px;
+margin-right:4px;
+background:rgba(0,213,255,0.15);
+color:#00d5ff;
 }
-
-/* TEXT */
-.small{color:#9aa0a6;font-size:13px;line-height:1.6;}
 
 /* MODAL */
 .modal{
@@ -113,26 +94,47 @@ background:rgba(0,0,0,0.8);
 backdrop-filter:blur(12px);
 justify-content:center;
 align-items:center;
-z-index:999;
 }
 
 .box{
-width:650px;
+width:680px;
 max-height:85vh;
 overflow:auto;
 background:#111;
 border-radius:16px;
 padding:22px;
 border:1px solid rgba(255,255,255,0.08);
-animation:pop 0.2s ease;
 }
 
-@keyframes pop{
-from{transform:scale(0.95);opacity:0}
-to{transform:scale(1);opacity:1}
+.top{
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding-bottom:12px;
+margin-bottom:12px;
 }
 
-ul{color:#aaa;font-size:13px;line-height:1.6;}
+.meta{
+color:#888;
+font-size:12px;
+margin-top:6px;
+}
+
+ul{
+color:#aaa;
+font-size:13px;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+margin-top:12px;
+padding:10px 14px;
+background:linear-gradient(90deg,#00d5ff,#7c5cff);
+color:#000;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+font-size:13px;
+}
 
 </style>
 </head>
@@ -141,53 +143,46 @@ ul{color:#aaa;font-size:13px;line-height:1.6;}
 
 <header>
 <div><b>Orvexa Apps</b></div>
-<nav>
-<a href="#apps">Apps</a>
-<a href="#about">About</a>
-<a href="#privacy">Privacy</a>
-</nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Orvexa Apps Portal</h1>
-<p>Premium Android & Fire TV applications</p>
+<p>Official developer ecosystem for Android and Fire TV applications.</p>
 </section>
 
-<!-- APPS -->
-<section class="section" id="apps">
-<h2>Applications</h2>
+<section class="section">
 
 <div class="grid">
 
 <div class="card" onclick="openApp(0)">
 <h3>Orvexa Files</h3>
-<p class="small">Fast file manager</p>
-<a class="btn" href="https://www.amazon.com/gp/product/B0F6D8GJTP" target="_blank" onclick="event.stopPropagation()">View on Amazon</a>
+<div class="badge">Android</div>
+<div class="badge">Free</div>
+<div class="badge">File Manager</div>
 </div>
 
 <div class="card" onclick="openApp(1)">
 <h3>Media Player</h3>
-<p class="small">Local playback system</p>
-<a class="btn" href="https://www.amazon.com/gp/product/B0DRNNVN1H" target="_blank" onclick="event.stopPropagation()">View on Amazon</a>
+<div class="badge">Fire TV</div>
+<div class="badge">Free</div>
 </div>
 
 <div class="card" onclick="openApp(2)">
 <h3>Files Pro</h3>
-<p class="small">Premium file manager</p>
-<a class="btn" href="https://www.amazon.com/gp/product/B0GX37331H" target="_blank" onclick="event.stopPropagation()">View on Amazon</a>
+<div class="badge">Android</div>
+<div class="badge">Premium</div>
 </div>
 
 <div class="card" onclick="openApp(3)">
 <h3>Playlist Player</h3>
-<p class="small">Playlist system</p>
-<a class="btn" href="https://www.amazon.com/gp/product/B0CWS28SXJ" target="_blank" onclick="event.stopPropagation()">View on Amazon</a>
+<div class="badge">Fire TV</div>
+<div class="badge">Free</div>
 </div>
 
 <div class="card" onclick="openApp(4)">
 <h3>Radio</h3>
-<p class="small">Global streaming</p>
-<a class="btn" href="https://www.amazon.com/gp/product/B0GTS87KSZ" target="_blank" onclick="event.stopPropagation()">View on Amazon</a>
+<div class="badge">Global</div>
+<div class="badge">Free</div>
 </div>
 
 </div>
@@ -196,10 +191,19 @@ ul{color:#aaa;font-size:13px;line-height:1.6;}
 <!-- MODAL -->
 <div class="modal" id="modal">
 <div class="box">
+
+<div class="top">
 <h2 id="title"></h2>
+<div class="meta" id="meta"></div>
+</div>
+
 <p id="desc"></p>
+
 <h4>Features</h4>
 <ul id="features"></ul>
+
+<a id="link" class="btn" target="_blank">Open in Amazon</a>
+
 </div>
 </div>
 
@@ -208,39 +212,53 @@ ul{color:#aaa;font-size:13px;line-height:1.6;}
 const apps=[
 {
 name:"Orvexa Files",
-desc:"Fast file manager for Android & Fire TV",
-features:["Fast browsing","Offline support","File operations"]
+meta:"Android • File Manager • v1.0",
+desc:"Fast and lightweight file manager.",
+features:["Fast browsing","Offline support","File operations"],
+link:"https://www.amazon.com/gp/product/B0F6D8GJTP"
 },
 {
 name:"Media Player",
-desc:"Local media playback system",
-features:["Video playback","Audio support","TV optimized"]
+meta:"Fire TV • Media • v1.0",
+desc:"Local playback system.",
+features:["Video playback","Audio support","TV optimized"],
+link:"https://www.amazon.com/gp/product/B0DRNNVN1H"
 },
 {
 name:"Files Pro",
-desc:"Premium file manager with no ads",
-features:["ZIP support","PDF viewer","No ads"]
+meta:"Android • Premium • v1.0",
+desc:"Premium file manager with advanced tools.",
+features:["ZIP support","PDF viewer","No ads"],
+link:"https://www.amazon.com/gp/product/B0GX37331H"
 },
 {
 name:"Playlist Player",
-desc:"Custom playlist management",
-features:["Playlist creation","Fast UI","TV support"]
+meta:"Fire TV • Media • v1.0",
+desc:"Playlist management system.",
+features:["Playlist creation","Fast UI","TV support"],
+link:"https://www.amazon.com/gp/product/B0CWS28SXJ"
 },
 {
 name:"Radio",
-desc:"Global radio streaming app",
-features:["Worldwide stations","Favorites","Background play"]
+meta:"Global • Streaming • v1.0",
+desc:"Worldwide radio streaming app.",
+features:["Stations","Favorites","Background play"],
+link:"https://www.amazon.com/gp/product/B0GTS87KSZ"
 }
 ];
 
 function openApp(i){
 let a=apps[i];
+
 document.getElementById("title").innerText=a.name;
+document.getElementById("meta").innerText=a.meta;
 document.getElementById("desc").innerText=a.desc;
 
 let f="";
 a.features.forEach(x=>f+="<li>"+x+"</li>");
 document.getElementById("features").innerHTML=f;
+
+document.getElementById("link").href=a.link;
 
 document.getElementById("modal").style.display="flex";
 }
