@@ -1,0 +1,44 @@
+{
+  "apps": [
+    {
+      "name": "Orvexa Files",
+      "asin": "B0F6D8GJTP",
+      "icon": "icons/files.png",
+      "desc": "Advanced file manager with APK support",
+      "status": "LIVE",
+      "store": "https://www.amazon.com/gp/product/B0F6D8GJTP"
+    },
+    {
+      "name": "Orvexa Files Pro",
+      "asin": "B0GX37331H",
+      "icon": "icons/filespro.png",
+      "desc": "Premium file engine with optimization layer",
+      "status": "LIVE",
+      "store": "https://www.amazon.com/gp/product/B0GX37331H"
+    },
+    {
+      "name": "Media Player",
+      "asin": "B0DRNNVN1H",
+      "icon": "icons/media.png",
+      "desc": "High-performance video playback engine",
+      "status": "LIVE",
+      "store": "https://www.amazon.com/gp/product/B0DRNNVN1H"
+    },
+    {
+      "name": "Playlist Player",
+      "asin": "B0CWS28SXJ",
+      "icon": "icons/playlist.png",
+      "desc": "Smart playlist streaming system",
+      "status": "LIVE",
+      "store": "https://www.amazon.com/gp/product/B0CWS28SXJ"
+    },
+    {
+      "name": "Orvexa Radio",
+      "asin": "B0GTS87KSZ",
+      "icon": "icons/radio.png",
+      "desc": "Global radio streaming platform",
+      "status": "LIVE",
+      "store": "https://www.amazon.com/gp/product/B0GTS87KSZ"
+    }
+  ]
+}
