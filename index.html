@@ -35,7 +35,6 @@ text-decoration:none;
 font-size:13px;
 transition:0.3s;
 }
-
 nav a:hover{color:#00d5ff;}
 
 /* HERO */
@@ -86,14 +85,12 @@ border:1px solid rgba(255,255,255,0.08);
 padding:18px;
 border-radius:16px;
 cursor:pointer;
-transition:0.35s;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-6px);
-border-color:rgba(0,213,255,0.5);
-box-shadow:0 18px 55px rgba(0,213,255,0.15);
+border-color:#00d5ff;
 }
 
 /* BUTTON */
@@ -101,7 +98,7 @@ box-shadow:0 18px 55px rgba(0,213,255,0.15);
 display:inline-block;
 margin-top:10px;
 padding:10px 14px;
-background: linear-gradient(90deg,#00d5ff,#7c5cff);
+background:linear-gradient(90deg,#00d5ff,#7c5cff);
 color:#000;
 text-decoration:none;
 border-radius:10px;
@@ -109,12 +106,19 @@ font-weight:bold;
 font-size:13px;
 }
 
+/* SMALL TEXT */
+.small{
+color:#9aa0a6;
+font-size:13px;
+line-height:1.6;
+}
+
 /* MODAL */
 .modal{
 display:none;
 position:fixed;
 inset:0;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 backdrop-filter:blur(12px);
 justify-content:center;
 align-items:center;
@@ -122,25 +126,29 @@ z-index:999;
 }
 
 .box{
-width:600px;
-max-height:80vh;
+width:650px;
+max-height:85vh;
 overflow:auto;
 background:#111;
-padding:22px;
 border-radius:16px;
+padding:22px;
 border:1px solid rgba(255,255,255,0.1);
 }
 
-.small{
-color:#9aa0a6;
-font-size:13px;
-line-height:1.6;
-}
-
+/* LIST */
 ul{
 color:#aaa;
 font-size:13px;
 line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+border-top:1px solid rgba(255,255,255,0.08);
+background:rgba(0,0,0,0.2);
 }
 
 </style>
@@ -148,6 +156,7 @@ line-height:1.6;
 
 <body>
 
+<!-- HEADER -->
 <header>
 <div><b>Orvexa Apps</b></div>
 <nav>
@@ -159,6 +168,7 @@ line-height:1.6;
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <h1>Orvexa Apps Official Portal</h1>
 <p>Premium Android & Fire TV applications built for performance, simplicity, and real-world usage.</p>
@@ -203,6 +213,57 @@ line-height:1.6;
 </div>
 </section>
 
+<!-- ABOUT -->
+<section class="section" id="about">
+<h2>About Orvexa</h2>
+<p class="small">
+Orvexa Apps is an independent software project focused on building fast, lightweight, and reliable applications for Android, Fire TV, and tablet devices.
+</p>
+</section>
+
+<!-- PRIVACY -->
+<section class="section" id="privacy">
+<h2>Privacy Policy</h2>
+<p class="small">
+Orvexa Apps does not collect, store, or share personal data or files.
+<br><br>
+Some apps use third-party ad networks (Start.io and partners) only for monetization.
+<br><br>
+All user content remains fully on the device.
+</p>
+</section>
+
+<!-- ADS -->
+<section class="section" id="ads">
+<h2>app-ads.txt</h2>
+
+<p class="small">
+Official ad verification file for Start.io and partners:
+</p>
+
+<pre>
+https://orvexaapps-lgtm.github.io/app-ads.txt
+start.io, 183139662, DIRECT
+pubnative.net, 1007349, RESELLER
+pubmatic.com, 161162, RESELLER
+rubiconproject.com, 24400, DIRECT
+appnexus.com, 7597, RESELLER
+</pre>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<h2>Contact</h2>
+
+<div class="card" onclick="window.location.href='mailto:orvexaapps@gmail.com?subject=Orvexa Support Request'">
+<h3>Orvexa Support</h3>
+<p class="small">Click to open Gmail and send a support request.</p>
+<a class="btn">Send Email</a>
+</div>
+
+</section>
+
 <!-- MODAL -->
 <div class="modal" id="modal">
 <div class="box">
@@ -233,7 +294,7 @@ link:"https://www.amazon.com/gp/product/B0DRNNVN1H"
 },
 {
 name:"Orvexa Files Pro",
-desc:"Premium file manager with advanced tools",
+desc:"Premium file manager with no ads",
 features:["ZIP support","PDF viewer","No ads"],
 link:"https://www.amazon.com/gp/product/B0GX37331H"
 },
@@ -270,6 +331,11 @@ this.style.display="none";
 };
 
 </script>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Orvexa Apps • All rights reserved
+</footer>
 
 </body>
 </html>
