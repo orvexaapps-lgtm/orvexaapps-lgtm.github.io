@@ -9,53 +9,58 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
-  background:#0a0b0f;
-  color:white;
+  background:#07080c;
+  color:#fff;
+  overflow-x:hidden;
 }
 
+/* HEADER */
 header{
   position:sticky;
   top:0;
-  backdrop-filter:blur(20px);
-  background:rgba(0,0,0,0.6);
-  padding:14px 24px;
+  backdrop-filter:blur(22px);
+  background:rgba(0,0,0,0.55);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  z-index:100;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
   display:flex;
   justify-content:space-between;
-  border-bottom:1px solid rgba(255,255,255,0.08);
+  align-items:center;
+  padding:14px 20px;
 }
 
-.logo{
-  font-weight:600;
-}
-
-nav a{
+.nav a{
   color:#aaa;
-  margin-left:16px;
   text-decoration:none;
+  margin-left:14px;
   font-size:13px;
 }
+.nav a:hover{color:#00d5ff;}
 
-nav a:hover{color:#00d5ff;}
-
+/* HERO */
 .hero{
   text-align:center;
-  padding:80px 20px;
+  padding:90px 20px 40px;
 }
 
 .hero h1{
-  font-size:40px;
+  font-size:44px;
   margin:0;
 }
 
 .hero p{
-  color:#aaa;
-  max-width:700px;
+  color:#999;
+  max-width:800px;
   margin:10px auto;
 }
 
 /* GRID */
 .grid{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -67,21 +72,23 @@ nav a:hover{color:#00d5ff;}
 .card{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;
+  border-radius:18px;
   padding:16px;
   cursor:pointer;
-  transition:0.3s;
+  transition:0.35s;
+  backdrop-filter:blur(16px);
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
   border-color:#00d5ff;
 }
 
+/* ICON */
 .icon{
-  width:50px;
-  height:50px;
-  border-radius:12px;
+  width:54px;
+  height:54px;
+  border-radius:14px;
   overflow:hidden;
   background:#111;
 }
@@ -89,40 +96,37 @@ nav a:hover{color:#00d5ff;}
 .icon img{
   width:100%;
   height:100%;
+  object-fit:cover;
 }
 
-.title{
-  margin-top:10px;
-  font-weight:600;
+/* TEXT */
+.title{margin-top:10px;font-weight:600;}
+.sub{color:#00d5ff;font-size:12px;}
+.desc{color:#aaa;font-size:12px;margin-top:8px;line-height:1.5}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(12px);
+  justify-content:center;
+  align-items:center;
 }
 
-.sub{
-  color:#00d5ff;
-  font-size:12px;
+.modal-box{
+  width:360px;
+  background:#111318;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:18px;
+  padding:20px;
 }
 
-.desc{
-  color:#aaa;
-  font-size:12px;
-  margin-top:8px;
-}
-
-/* INFO */
-.section{
-  max-width:800px;
-  margin:60px auto;
-  text-align:center;
-  color:#aaa;
-  padding:0 20px;
-}
-
-/* CONTACT */
-.contact{
-  background:rgba(0,255,180,0.08);
-  border:1px solid rgba(0,255,180,0.2);
-  padding:16px;
-  border-radius:12px;
+.close{
+  float:right;
   cursor:pointer;
+  color:#aaa;
 }
 
 /* FOOTER */
@@ -131,6 +135,7 @@ footer{
   padding:30px;
   color:#666;
   border-top:1px solid rgba(255,255,255,0.06);
+  margin-top:40px;
 }
 </style>
 </head>
@@ -138,82 +143,101 @@ footer{
 <body>
 
 <header>
-  <div class="logo">Orvexa Developer Portal</div>
-  <nav>
-    <a href="#apps">Apps</a>
-    <a href="#privacy">Privacy</a>
-    <a href="#contact">Contact</a>
-    <a href="app-ads.txt" target="_blank">app-ads.txt</a>
-  </nav>
+  <div class="nav">
+    <div>Orvexa Developer Portal</div>
+    <div>
+      <a href="#apps">Apps</a>
+      <a href="app-ads.txt">Ads</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </header>
 
 <section class="hero">
-  <h1>Orvexa Application Ecosystem</h1>
-  <p>Official developer portal for Android and Fire TV applications.</p>
+  <h1>Orvexa Ecosystem</h1>
+  <p>Official developer platform for Android and Fire TV applications.</p>
 </section>
 
-<section class="grid">
+<section class="grid" id="apps">
 
-  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0F6D8GJTP')">
-    <div class="icon"><img src="orvexa_files.png"></div>
+  <div class="card" onclick="openModal('Orvexa Files','File Manager','Advanced file tools and APK installer','https://www.amazon.com/gp/product/B0F6D8GJTP')">
+    <div class="icon"><img src="icons/orvexa-files.png"></div>
     <div class="title">Orvexa Files</div>
     <div class="sub">File Manager</div>
-    <div class="desc">File browsing, APK install, storage tools.</div>
+    <div class="desc">Storage browser + APK installer</div>
   </div>
 
-  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0GX37331H')">
-    <div class="icon"><img src="orvexa_files_pro.png"></div>
+  <div class="card" onclick="openModal('Orvexa Files Pro','Premium File Manager','Advanced performance file system','https://www.amazon.com/gp/product/B0GX37331H')">
+    <div class="icon"><img src="icons/orvexa-files-pro.png"></div>
     <div class="title">Orvexa Files Pro</div>
-    <div class="sub">Premium File Manager</div>
-    <div class="desc">Advanced tools and performance optimization.</div>
+    <div class="sub">Premium</div>
+    <div class="desc">Advanced file optimization engine</div>
   </div>
 
-  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0DRNNVN1H')">
-    <div class="icon"><img src="media.png"></div>
+  <div class="card" onclick="openModal('Media Player','Video Player','Optimized playback engine','https://www.amazon.com/gp/product/B0DRNNVN1H')">
+    <div class="icon"><img src="icons/media-player.png"></div>
     <div class="title">Media Player</div>
-    <div class="sub">Video Playback</div>
-    <div class="desc">Smooth playback for TV and mobile.</div>
+    <div class="sub">Playback</div>
+    <div class="desc">Smooth video playback system</div>
   </div>
 
-  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0CWS28SXJ')">
-    <div class="icon"><img src="playlist.png"></div>
+  <div class="card" onclick="openModal('Playlist Player','Streaming','Playlist based playback','https://www.amazon.com/gp/product/B0CWS28SXJ')">
+    <div class="icon"><img src="icons/playlist.png"></div>
     <div class="title">Playlist Player</div>
     <div class="sub">Streaming</div>
-    <div class="desc">Organized playlist system.</div>
+    <div class="desc">Smart playlist navigation</div>
   </div>
 
-  <div class="card" onclick="openApp('https://www.amazon.com/gp/product/B0GTS87KSZ')">
-    <div class="icon"><img src="radio.png"></div>
+  <div class="card" onclick="openModal('Orvexa Radio','Audio Streaming','Global radio platform','https://www.amazon.com/gp/product/B0GTS87KSZ')">
+    <div class="icon"><img src="icons/radio.png"></div>
     <div class="title">Orvexa Radio</div>
-    <div class="sub">Audio Streaming</div>
-    <div class="desc">Lightweight internet radio app.</div>
+    <div class="sub">Radio</div>
+    <div class="desc">Lightweight streaming radio</div>
   </div>
 
 </section>
 
-<section class="section" id="privacy">
-  Privacy & Advertising  
-  <br><br>
-  Apps may use ads and analytics for free functionality and improvement.
+<section id="privacy" style="text-align:center;padding:40px;color:#aaa;">
+Privacy & Advertising<br><br>
+Start.io + analytics may be used for ecosystem performance and monetization.
 </section>
 
-<section class="section" id="contact">
-  <div class="contact" onclick="mail()">
-    Contact Developer Support
-  </div>
+<section id="contact" style="text-align:center;padding:30px;">
+<button onclick="location.href='mailto:orvexaapps@gmail.com?subject=Developer Support'"
+style="padding:12px 18px;border-radius:10px;border:none;background:#00d5ff;color:black;font-weight:600;">
+Contact Developer
+</button>
 </section>
 
 <footer>
 © 2026 Orvexa Apps
 </footer>
 
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="close" onclick="closeModal()">✕</div>
+    <h3 id="m-title"></h3>
+    <p id="m-sub"></p>
+    <p id="m-desc" style="color:#aaa"></p>
+    <button id="m-link" style="margin-top:10px;padding:10px;border:none;border-radius:10px;background:#00d5ff;color:black;width:100%;">
+      Open Amazon
+    </button>
+  </div>
+</div>
+
 <script>
-function openApp(url){
-  window.open(url,"_blank");
+function openModal(t,s,d,l){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("m-title").innerText=t;
+  document.getElementById("m-sub").innerText=s;
+  document.getElementById("m-desc").innerText=d;
+  document.getElementById("m-link").onclick=()=>window.open(l,"_blank");
 }
 
-function mail(){
-  window.location.href="mailto:orvexaapps@gmail.com?subject=Support";
+function closeModal(){
+  document.getElementById("modal").style.display="none";
 }
 </script>
 
