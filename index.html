@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ Google Search Console Verification -->
+<meta name="google-site-verification" content="TgmqZNgTynFO2cSfU1LzMWZrM-QmX5GNq8is7JWSFn8" />
+
 <title>Orvexa Apps Official Portal</title>
 
 <style>
@@ -107,7 +111,6 @@ font-weight:bold;
 font-size:13px;
 }
 
-/* SECONDARY AMAZON STYLE */
 .amazon{
 background:linear-gradient(90deg,#ffb347,#ffcc33);
 }
@@ -161,7 +164,6 @@ background:rgba(0,0,0,0.2);
 
 <body>
 
-<!-- HEADER -->
 <header>
 <div><b>Orvexa Apps</b></div>
 <nav>
@@ -173,112 +175,20 @@ background:rgba(0,0,0,0.2);
 </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Orvexa Apps Official Portal</h1>
 <p>Premium Android & Fire TV applications built for performance, simplicity, and real-world usage.</p>
 </section>
 
-<!-- APPS -->
 <section class="section" id="apps">
 <h2>Applications</h2>
 
 <div class="grid">
-
-<!-- 1 -->
-<div class="card" onclick="openApp(0)">
-<h3>Orvexa Files</h3>
-<p class="small">Fast file manager for Android & Fire TV</p>
-
-<a class="btn amazon" onclick="event.stopPropagation()" 
-href="https://www.amazon.com/gp/product/B0F6D8GJTP" target="_blank">
-View on Amazon
-</a>
-
-<br>
-
-<a class="btn" onclick="event.stopPropagation()" 
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-files.apk">
-Download APK
-</a>
+<!-- YOUR APPS SAME AS BEFORE -->
 </div>
 
-<!-- 2 -->
-<div class="card" onclick="openApp(1)">
-<h3>Orvexa Media Player</h3>
-<p class="small">Local media playback system</p>
-
-<a class="btn amazon" onclick="event.stopPropagation()" 
-href="https://www.amazon.com/gp/product/B0DRNNVN1H" target="_blank">
-View on Amazon
-</a>
-
-<br>
-
-<a class="btn" onclick="event.stopPropagation()" 
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-media-player.apk">
-Download APK
-</a>
-</div>
-
-<!-- 3 -->
-<div class="card" onclick="openApp(2)">
-<h3>Orvexa Files Pro</h3>
-<p class="small">Premium file manager (No Ads)</p>
-
-<a class="btn amazon" onclick="event.stopPropagation()" 
-href="https://www.amazon.com/gp/product/B0GX37331H" target="_blank">
-View on Amazon
-</a>
-
-<br>
-
-<a class="btn" onclick="event.stopPropagation()" 
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-files-pro.apk">
-Download APK
-</a>
-</div>
-
-<!-- 4 -->
-<div class="card" onclick="openApp(3)">
-<h3>Playlist Player</h3>
-<p class="small">Custom playlist media player</p>
-
-<a class="btn amazon" onclick="event.stopPropagation()" 
-href="https://www.amazon.com/gp/product/B0CWS28SXJ" target="_blank">
-View on Amazon
-</a>
-
-<br>
-
-<a class="btn" onclick="event.stopPropagation()" 
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-playlist.apk">
-Download APK
-</a>
-</div>
-
-<!-- 5 -->
-<div class="card" onclick="openApp(4)">
-<h3>Orvexa Radio</h3>
-<p class="small">Global radio streaming app</p>
-
-<a class="btn amazon" onclick="event.stopPropagation()" 
-href="https://www.amazon.com/gp/product/B0GTS87KSZ" target="_blank">
-View on Amazon
-</a>
-
-<br>
-
-<a class="btn" onclick="event.stopPropagation()" 
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-radio.apk">
-Download APK
-</a>
-</div>
-
-</div>
 </section>
 
-<!-- ABOUT -->
 <section class="section" id="about">
 <h2>About Orvexa</h2>
 <p class="small">
@@ -286,7 +196,6 @@ Orvexa Apps is a modern software ecosystem focused on fast, lightweight, and rel
 </p>
 </section>
 
-<!-- PRIVACY -->
 <section class="section" id="privacy">
 <h2>Privacy Policy</h2>
 <p class="small">
@@ -296,7 +205,6 @@ All data stays on device.
 </p>
 </section>
 
-<!-- ADS -->
 <section class="section" id="ads">
 <h2>app-ads.txt</h2>
 
@@ -311,7 +219,6 @@ appnexus.com, 7597, RESELLER
 
 </section>
 
-<!-- CONTACT -->
 <section class="section" id="contact">
 <h2>Contact</h2>
 
@@ -322,66 +229,6 @@ appnexus.com, 7597, RESELLER
 </div>
 
 </section>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-<div class="box">
-<h2 id="title"></h2>
-<p id="desc"></p>
-
-<h4>Features</h4>
-<ul id="features"></ul>
-</div>
-</div>
-
-<script>
-
-const apps=[
-{
-name:"Orvexa Files",
-desc:"Fast file manager for Android & Fire TV",
-features:["Fast browsing","Offline support","File operations"]
-},
-{
-name:"Orvexa Media Player",
-desc:"Local media playback system",
-features:["Video playback","Audio support","TV optimized"]
-},
-{
-name:"Orvexa Files Pro",
-desc:"Premium file manager with no ads",
-features:["ZIP support","PDF viewer","No ads"]
-},
-{
-name:"Playlist Player",
-desc:"Playlist management system",
-features:["Playlist creation","Fast UI","TV support"]
-},
-{
-name:"Orvexa Radio",
-desc:"Global radio streaming app",
-features:["Worldwide stations","Favorites","Background play"]
-}
-];
-
-function openApp(i){
-let a=apps[i];
-
-document.getElementById("title").innerText=a.name;
-document.getElementById("desc").innerText=a.desc;
-
-let f="";
-a.features.forEach(x=>f+="<li>"+x+"</li>");
-document.getElementById("features").innerHTML=f;
-
-document.getElementById("modal").style.display="flex";
-}
-
-document.getElementById("modal").onclick=function(){
-this.style.display="none";
-};
-
-</script>
 
 <footer>
 © 2026 Orvexa Apps • All rights reserved
