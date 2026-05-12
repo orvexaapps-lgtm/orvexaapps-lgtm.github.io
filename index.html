@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,13 +11,17 @@
 
 <meta name="description" content="Official Orvexa Apps portal featuring Android and Fire TV applications including file managers, media players, playlist systems, and radio streaming apps.">
 
-<meta name="keywords" content="Orvexa Apps, Android Apps, Fire TV Apps, APK Download, File Manager, Media Player, Radio App, Playlist Player">
+<meta name="keywords" content="Orvexa Apps, Android Apps, Fire TV Apps, File Manager, Media Player, Playlist Player, Radio Streaming">
 
 <meta name="author" content="Orvexa Apps">
 
 <meta name="robots" content="index, follow">
 
+<meta name="theme-color" content="#07090d">
+
 <link rel="canonical" href="https://orvexaapps-lgtm.github.io/">
+
+<link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
 
 <meta property="og:title" content="Orvexa Apps Official Portal">
 <meta property="og:description" content="Premium Android and Fire TV applications built for performance and simplicity.">
@@ -25,57 +31,127 @@
 
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="assets/icons/orvexa-files.png">
-
 <meta name="google-site-verification" content="TgmqZNgTynFO2cSfU1LzMWZrM-QmX5GNq8is7JWSFn8">
 
-<meta name="theme-color" content="#07090d">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Orvexa Apps",
+  "url":"https://orvexaapps-lgtm.github.io/",
+  "logo":"https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png",
+  "sameAs":[
+    "https://github.com/orvexaapps-lgtm"
+  ],
+  "contactPoint":{
+    "@type":"ContactPoint",
+    "email":"orvexaapps@gmail.com",
+    "contactType":"customer support"
+  }
+}
+</script>
 
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth;}
-body{margin:0;font-family:Arial,sans-serif;background:#07090d;color:#fff;overflow-x:hidden;}
+
+*{
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#07090d;
+color:#fff;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* HEADER */
 
 header{
-position:sticky;top:0;
-display:flex;justify-content:space-between;align-items:center;
-padding:16px 24px;
-background:rgba(10,12,18,0.88);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,0.08);
+position:sticky;
+top:0;
 z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 24px;
+background:rgba(10,12,18,.88);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-font-size:24px;font-weight:bold;
+font-size:24px;
+font-weight:bold;
 background:linear-gradient(90deg,#00d5ff,#7c5cff);
--webkit-background-clip:text;-webkit-text-fill-color:transparent;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-nav{display:flex;flex-wrap:wrap;}
+nav{
+display:flex;
+flex-wrap:wrap;
+}
 
 nav a{
-color:#aaa;margin-left:18px;text-decoration:none;font-size:14px;
+color:#aaa;
+text-decoration:none;
+margin-left:18px;
+font-size:14px;
+transition:.3s;
 }
 
-nav a:hover{color:#00d5ff;}
+nav a:hover{
+color:#00d5ff;
+}
+
+/* HERO */
 
 .hero{
-padding:120px 20px;text-align:center;
+padding:120px 20px;
+text-align:center;
 background:
-radial-gradient(circle,rgba(0,213,255,.16),transparent 60%),
+radial-gradient(circle at center,rgba(0,213,255,.16),transparent 60%),
 radial-gradient(circle at bottom,rgba(124,92,255,.10),transparent 60%);
 }
 
 .hero h1{
-font-size:54px;margin:0;
+font-size:54px;
+margin:0;
 background:linear-gradient(90deg,#00d5ff,#7c5cff);
--webkit-background-clip:text;-webkit-text-fill-color:transparent;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.hero p{max-width:900px;margin:18px auto 0;color:#9aa0a6;line-height:1.8;}
+.hero p{
+max-width:900px;
+margin:20px auto 0;
+color:#9aa0a6;
+font-size:17px;
+line-height:1.8;
+}
 
-.section{max-width:1200px;margin:auto;padding:80px 20px;}
-.section h2{font-size:34px;margin-bottom:28px;}
+/* SECTION */
+
+.section{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:28px;
+}
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -83,37 +159,172 @@ grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
 gap:22px;
 }
 
+/* CARD */
+
 .card{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-padding:22px;border-radius:22px;
+background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:22px;
+transition:.3s;
+display:flex;
+flex-direction:column;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#00d5ff;
+box-shadow:0 10px 40px rgba(0,213,255,.12);
+}
+
+.app-icon{
+width:82px;
+height:82px;
+border-radius:22px;
+margin-bottom:16px;
+box-shadow:0 12px 35px rgba(0,0,0,.45);
+}
+
+.card h3{
+margin:0 0 10px;
+font-size:24px;
+}
+
+.small{
+color:#9aa0a6;
+font-size:14px;
+line-height:1.7;
+}
+
+/* BUTTONS */
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:11px 16px;
+border-radius:12px;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+margin-top:10px;
+margin-right:10px;
 transition:.3s;
 }
 
-.card:hover{transform:translateY(-6px);border-color:#00d5ff;}
-
-.app-icon{width:82px;height:82px;border-radius:22px;margin-bottom:16px;}
-
-.small{color:#9aa0a6;font-size:14px;line-height:1.7;}
-
-.btn{
-display:inline-block;margin-top:10px;margin-right:10px;
-padding:11px 16px;border-radius:12px;
-text-decoration:none;font-size:13px;font-weight:bold;
+.btn:hover{
+transform:translateY(-2px);
 }
 
-.details{background:#34d399;color:#000;}
-.amazon{background:#ffcc33;color:#000;}
-.download{background:#7c5cff;color:#000;}
-.privacy{background:#64748b;color:#fff;}
+.details{
+background:linear-gradient(90deg,#34d399,#10b981);
+color:#000;
+}
+
+.amazon{
+background:linear-gradient(90deg,#ffb347,#ffcc33);
+color:#000;
+}
+
+.download{
+background:linear-gradient(90deg,#00d5ff,#7c5cff);
+color:#000;
+}
+
+.privacy{
+background:linear-gradient(90deg,#94a3b8,#64748b);
+color:#fff;
+}
+
+/* SCREENSHOTS */
+
+.screenshot{
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.screenshot:hover{
+transform:scale(1.02);
+}
+
+/* FEATURES */
+
+.article{
+padding:24px;
+border-radius:20px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);
+transition:.3s;
+}
+
+.article:hover{
+border-color:#00d5ff;
+}
+
+/* CONTACT */
+
+.contact-box{
+max-width:500px;
+}
+
+/* FOOTER */
 
 footer{
-margin-top:80px;padding:40px;text-align:center;
-color:#777;border-top:1px solid rgba(255,255,255,0.08);
+margin-top:80px;
+padding:40px;
+text-align:center;
+color:#777;
+border-top:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.02);
 }
 
-footer a{color:#aaa;margin:0 10px;text-decoration:none;}
-footer a:hover{color:#00d5ff;}
+footer a{
+color:#999;
+text-decoration:none;
+margin:0 10px;
+}
+
+footer a:hover{
+color:#00d5ff;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+nav{
+justify-content:center;
+}
+
+nav a{
+margin:6px 10px;
+}
+
+.hero{
+padding:90px 20px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.section h2{
+font-size:28px;
+}
+
+.btn{
+width:100%;
+margin-right:0;
+}
+
+}
+
 </style>
 
 </head>
@@ -121,6 +332,7 @@ footer a:hover{color:#00d5ff;}
 <body>
 
 <header>
+
 <div class="logo">Orvexa Apps</div>
 
 <nav>
@@ -132,11 +344,19 @@ footer a:hover{color:#00d5ff;}
 <a href="terms.html">Terms</a>
 <a href="contact.html">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
+
 <h1>Orvexa Apps Official Portal</h1>
-<p>Premium Android and Fire TV applications designed for performance and simplicity.</p>
+
+<p>
+Premium Android and Fire TV applications designed for performance,
+modern user experience, smooth TV remote navigation,
+offline functionality, and lightweight responsiveness.
+</p>
+
 </section>
 
 <section class="section" id="apps">
@@ -146,40 +366,84 @@ footer a:hover{color:#00d5ff;}
 <div class="grid">
 
 <div class="card">
-<img src="assets/icons/orvexa-files.png" class="app-icon">
+
+<img loading="lazy" src="assets/icons/orvexa-files.png" class="app-icon" alt="Orvexa Files">
+
 <h3>Orvexa Files</h3>
-<p class="small">File manager with TV support, media tools, and APK handling.</p>
-<a class="btn details" href="orvexa-files.html">Details</a>
-<a class="btn amazon" href="https://www.amazon.com/gp/product/B0F6D8GJTP" target="_blank">Amazon</a>
-<a class="btn download" href="#">APK</a>
+
+<p class="small">
+Modern file manager with storage tools, APK support,
+media playback, and Android TV optimization.
+</p>
+
+<a class="btn details" href="orvexa-files.html">View Details</a>
+
+<a class="btn amazon"
+href="https://www.amazon.com/gp/product/B0F6D8GJTP"
+target="_blank"
+rel="noopener noreferrer">
+Amazon Store
+</a>
+
+<a class="btn download"
+href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-files.apk">
+Download APK
+</a>
+
 </div>
 
 <div class="card">
-<img src="assets/icons/orvexa-media-player.png" class="app-icon">
-<h3>Media Player</h3>
-<p class="small">Local video/audio player optimized for TV devices.</p>
-<a class="btn details" href="media-player.html">Details</a>
+
+<img loading="lazy" src="assets/icons/orvexa-media-player.png" class="app-icon" alt="Orvexa Media Player">
+
+<h3>Orvexa Media Player</h3>
+
+<p class="small">
+Smooth local audio and video player with resume playback,
+search support, and TV remote navigation.
+</p>
+
+<a class="btn details" href="media-player.html">View Details</a>
+
+<a class="btn amazon"
+href="https://www.amazon.com/gp/product/B0DRNNVN1H"
+target="_blank"
+rel="noopener noreferrer">
+Amazon Store
+</a>
+
+<a class="btn download"
+href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-media-player.apk">
+Download APK
+</a>
+
 </div>
 
 <div class="card">
-<img src="assets/icons/orvexa-files-pro.png" class="app-icon">
-<h3>Files Pro</h3>
-<p class="small">Premium file manager with advanced tools and no ads.</p>
-<a class="btn details" href="files-pro.html">Details</a>
-</div>
 
-<div class="card">
-<img src="assets/icons/playlist-player.png" class="app-icon">
-<h3>Playlist Player</h3>
-<p class="small">Local playlist creation and playback system.</p>
-<a class="btn details" href="playlist-player.html">Details</a>
-</div>
+<img loading="lazy" src="assets/icons/orvexa-radio.png" class="app-icon" alt="Orvexa Radio">
 
-<div class="card">
-<img src="assets/icons/orvexa-radio.png" class="app-icon">
 <h3>Orvexa Radio</h3>
-<p class="small">Global radio streaming app with favorites and search.</p>
-<a class="btn details" href="orvexa-radio.html">Details</a>
+
+<p class="small">
+Worldwide radio streaming app with favorites,
+genre search, and optimized Fire TV layouts.
+</p>
+
+<a class="btn details" href="orvexa-radio.html">View Details</a>
+
+<a class="btn amazon"
+href="https://www.amazon.com/gp/product/B0GTS87KSZ"
+target="_blank"
+rel="noopener noreferrer">
+Amazon Store
+</a>
+
+<a class="btn download"
+href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-radio.apk">
+Download APK
+</a>
+
 </div>
 
 </div>
@@ -187,46 +451,73 @@ footer a:hover{color:#00d5ff;}
 </section>
 
 <section class="section" id="features">
-<h2>Features</h2>
+
+<h2>Why Choose Orvexa Apps?</h2>
 
 <div class="grid">
-<div class="card"><h3>Fast</h3><p class="small">Lightweight performance optimized apps.</p></div>
-<div class="card"><h3>TV Ready</h3><p class="small">Fire TV & Android TV support.</p></div>
-<div class="card"><h3>Offline</h3><p class="small">Works without internet where possible.</p></div>
-</div>
-</section>
 
-<section class="section" id="screenshots">
-<h2>Screenshots</h2>
-<div class="grid">
-<img class="card" src="assets/screenshots/files-1.png">
-<img class="card" src="assets/screenshots/player-1.png">
-<img class="card" src="assets/screenshots/radio-1.png">
-</div>
-</section>
-
-<section class="section">
-<h2>About</h2>
+<div class="article">
+<h3>Optimized for Fire TV</h3>
 <p class="small">
-Orvexa Apps builds lightweight Android and Fire TV applications focused on simplicity and performance.
+Designed for smooth D-pad and remote navigation with TV-friendly layouts.
 </p>
+</div>
+
+<div class="article">
+<h3>Fast Lightweight Performance</h3>
+<p class="small">
+Apps are optimized for low memory usage and responsive performance.
+</p>
+</div>
+
+<div class="article">
+<h3>Privacy Focused</h3>
+<p class="small">
+Transparent permissions and local storage focused experiences.
+</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="section" id="contact">
+
 <h2>Contact</h2>
-<div class="card">
-<p class="small">orvexaapps@gmail.com</p>
-<a class="btn download" href="mailto:orvexaapps@gmail.com">Email Us</a>
+
+<div class="card contact-box">
+
+<h3>Orvexa Support</h3>
+
+<p class="small">
+Need help, support, or business inquiries regarding Orvexa applications?
+</p>
+
+<a class="btn download" href="mailto:orvexaapps@gmail.com">
+Send Email
+</a>
+
 </div>
+
 </section>
 
 <footer>
-<p>© 2026 Orvexa Apps</p>
-<a href="privacy-policy.html">Privacy</a>
+
+<p>
+© 2026 Orvexa Apps • All rights reserved
+</p>
+
+<div style="margin-top:14px;">
+
+<a href="privacy-policy.html">Privacy Policy</a>
 <a href="terms.html">Terms</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+
+</div>
+
 </footer>
 
 </body>
 </html>
+```
