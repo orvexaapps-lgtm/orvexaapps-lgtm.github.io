@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,17 +10,13 @@
 
 <meta name="description" content="Official Orvexa Apps portal featuring Android and Fire TV applications including file managers, media players, playlist systems, and radio streaming apps.">
 
-<meta name="keywords" content="Orvexa Apps, Android Apps, Fire TV Apps, File Manager, Media Player, Playlist Player, Radio Streaming">
+<meta name="keywords" content="Orvexa Apps, Android Apps, Fire TV Apps, APK Download, File Manager, Media Player, Radio App, Playlist Player">
 
 <meta name="author" content="Orvexa Apps">
 
 <meta name="robots" content="index, follow">
 
-<meta name="theme-color" content="#07090d">
-
 <link rel="canonical" href="https://orvexaapps-lgtm.github.io/">
-
-<link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
 
 <meta property="og:title" content="Orvexa Apps Official Portal">
 <meta property="og:description" content="Premium Android and Fire TV applications built for performance and simplicity.">
@@ -31,7 +26,29 @@
 
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
+
+<meta name="theme-color" content="#07090d">
+
 <meta name="google-site-verification" content="TgmqZNgTynFO2cSfU1LzMWZrM-QmX5GNq8is7JWSFn8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="format-detection" content="telephone=no">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="apple-mobile-web-app-title" content="Orvexa Apps">
+
+<link rel="preconnect" href="https://github.com">
+
+<link rel="dns-prefetch" href="//github.com">
+
+<link rel="dns-prefetch" href="//amazon.com">
 
 <script type="application/ld+json">
 {
@@ -77,14 +94,14 @@ display:block;
 header{
 position:sticky;
 top:0;
-z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:16px 24px;
-background:rgba(10,12,18,.88);
+background:rgba(10,12,18,0.88);
 backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,0.08);
+z-index:1000;
 }
 
 .logo{
@@ -102,8 +119,8 @@ flex-wrap:wrap;
 
 nav a{
 color:#aaa;
-text-decoration:none;
 margin-left:18px;
+text-decoration:none;
 font-size:14px;
 transition:.3s;
 }
@@ -132,10 +149,11 @@ background:linear-gradient(90deg,#00d5ff,#7c5cff);
 
 .hero p{
 max-width:900px;
-margin:20px auto 0;
+margin:auto;
+margin-top:18px;
 color:#9aa0a6;
-font-size:17px;
 line-height:1.8;
+font-size:17px;
 }
 
 /* SECTION */
@@ -164,9 +182,11 @@ gap:22px;
 .card{
 background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
 border:1px solid rgba(255,255,255,.08);
-border-radius:22px;
 padding:22px;
+border-radius:22px;
 transition:.3s;
+position:relative;
+overflow:hidden;
 display:flex;
 flex-direction:column;
 }
@@ -183,6 +203,7 @@ height:82px;
 border-radius:22px;
 margin-bottom:16px;
 box-shadow:0 12px 35px rgba(0,0,0,.45);
+object-fit:cover;
 }
 
 .card h3{
@@ -192,8 +213,8 @@ font-size:24px;
 
 .small{
 color:#9aa0a6;
-font-size:14px;
 line-height:1.7;
+font-size:14px;
 }
 
 /* BUTTONS */
@@ -202,13 +223,13 @@ line-height:1.7;
 display:inline-flex;
 align-items:center;
 justify-content:center;
+margin-top:10px;
+margin-right:10px;
 padding:11px 16px;
 border-radius:12px;
 text-decoration:none;
 font-size:13px;
 font-weight:bold;
-margin-top:10px;
-margin-right:10px;
 transition:.3s;
 }
 
@@ -239,6 +260,7 @@ color:#fff;
 /* SCREENSHOTS */
 
 .screenshot{
+width:100%;
 border-radius:20px;
 border:1px solid rgba(255,255,255,.08);
 transition:.3s;
@@ -248,7 +270,7 @@ transition:.3s;
 transform:scale(1.02);
 }
 
-/* FEATURES */
+/* ARTICLE */
 
 .article{
 padding:24px;
@@ -281,8 +303,8 @@ background:rgba(255,255,255,.02);
 
 footer a{
 color:#999;
-text-decoration:none;
 margin:0 10px;
+text-decoration:none;
 }
 
 footer a:hover{
@@ -339,13 +361,15 @@ margin-right:0;
 <a href="#apps">Apps</a>
 <a href="#screenshots">Screenshots</a>
 <a href="#features">Features</a>
-<a href="about.html">About</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 <a href="privacy-policy.html">Privacy</a>
 <a href="terms.html">Terms</a>
-<a href="contact.html">Contact</a>
 </nav>
 
 </header>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -359,11 +383,15 @@ offline functionality, and lightweight responsiveness.
 
 </section>
 
+<!-- APPS -->
+
 <section class="section" id="apps">
 
 <h2>Applications</h2>
 
 <div class="grid">
+
+<!-- ORVEXA FILES -->
 
 <div class="card">
 
@@ -376,7 +404,9 @@ Modern file manager with storage tools, APK support,
 media playback, and Android TV optimization.
 </p>
 
-<a class="btn details" href="orvexa-files.html">View Details</a>
+<a class="btn details" href="orvexa-files.html">
+View Details
+</a>
 
 <a class="btn amazon"
 href="https://www.amazon.com/gp/product/B0F6D8GJTP"
@@ -390,7 +420,16 @@ href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/down
 Download APK
 </a>
 
+<a class="btn privacy"
+href="https://orvexafiles.blogspot.com/2026/04/privacy-policy-orvexa-files.html"
+target="_blank"
+rel="noopener noreferrer">
+Privacy Policy
+</a>
+
 </div>
+
+<!-- MEDIA PLAYER -->
 
 <div class="card">
 
@@ -403,7 +442,9 @@ Smooth local audio and video player with resume playback,
 search support, and TV remote navigation.
 </p>
 
-<a class="btn details" href="media-player.html">View Details</a>
+<a class="btn details" href="media-player.html">
+View Details
+</a>
 
 <a class="btn amazon"
 href="https://www.amazon.com/gp/product/B0DRNNVN1H"
@@ -417,7 +458,92 @@ href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/down
 Download APK
 </a>
 
+<a class="btn privacy"
+href="https://orvexamediaplayer.blogspot.com/2026/03/privacy-policy-orvexa-media-player-body.html"
+target="_blank"
+rel="noopener noreferrer">
+Privacy Policy
+</a>
+
 </div>
+
+<!-- FILES PRO -->
+
+<div class="card">
+
+<img loading="lazy" src="assets/icons/orvexa-files-pro.png" class="app-icon" alt="Orvexa Files Pro">
+
+<h3>Orvexa Files Pro</h3>
+
+<p class="small">
+Premium ad-free file manager with PDF tools,
+ZIP extraction, APK install support, and media utilities.
+</p>
+
+<a class="btn details" href="files-pro.html">
+View Details
+</a>
+
+<a class="btn amazon"
+href="https://www.amazon.com/gp/product/B0GX37331H"
+target="_blank"
+rel="noopener noreferrer">
+Amazon Store
+</a>
+
+<a class="btn download"
+href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-files-pro.apk">
+Download APK
+</a>
+
+<a class="btn privacy"
+href="https://orvexafilespro.blogspot.com/2026/04/orvexa-files-pro-privacy-policy-terms.html"
+target="_blank"
+rel="noopener noreferrer">
+Privacy Policy
+</a>
+
+</div>
+
+<!-- PLAYLIST -->
+
+<div class="card">
+
+<img loading="lazy" src="assets/icons/playlist-player.png" class="app-icon" alt="Orvexa Playlist Player">
+
+<h3>Orvexa Playlist Player</h3>
+
+<p class="small">
+Lightweight local playlist player for Fire Tablets with smooth
+audio and video playlist management.
+</p>
+
+<a class="btn details" href="playlist-player.html">
+View Details
+</a>
+
+<a class="btn amazon"
+href="https://www.amazon.com/gp/product/B0CWS28SXJ"
+target="_blank"
+rel="noopener noreferrer">
+Amazon Store
+</a>
+
+<a class="btn download"
+href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-playlist.apk">
+Download APK
+</a>
+
+<a class="btn privacy"
+href="https://orvexaplaylistplayer.blogspot.com/2026/04/orvexa-playlist-player-privacy-policy.html"
+target="_blank"
+rel="noopener noreferrer">
+Privacy Policy
+</a>
+
+</div>
+
+<!-- RADIO -->
 
 <div class="card">
 
@@ -430,7 +556,9 @@ Worldwide radio streaming app with favorites,
 genre search, and optimized Fire TV layouts.
 </p>
 
-<a class="btn details" href="orvexa-radio.html">View Details</a>
+<a class="btn details" href="orvexa-radio.html">
+View Details
+</a>
 
 <a class="btn amazon"
 href="https://www.amazon.com/gp/product/B0GTS87KSZ"
@@ -444,11 +572,48 @@ href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/down
 Download APK
 </a>
 
+<a class="btn privacy"
+href="https://orvexaradio.blogspot.com/2026/04/ovexa-radio-privacy-policy-privacy.html"
+target="_blank"
+rel="noopener noreferrer">
+Privacy Policy
+</a>
+
 </div>
 
 </div>
 
 </section>
+
+<!-- SCREENSHOTS -->
+
+<section class="section" id="screenshots">
+
+<h2>App Screenshots</h2>
+
+<div class="grid">
+
+<img loading="lazy" src="assets/screenshots/files-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-3.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-4.png" class="screenshot">
+
+<img loading="lazy" src="assets/screenshots/player-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/player-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/player-3.png" class="screenshot">
+
+<img loading="lazy" src="assets/screenshots/filespro-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/filespro-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/filespro-3.png" class="screenshot">
+
+<img loading="lazy" src="assets/screenshots/radio-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/radio-2.png" class="screenshot">
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
 
 <section class="section" id="features">
 
@@ -471,15 +636,97 @@ Apps are optimized for low memory usage and responsive performance.
 </div>
 
 <div class="article">
+<h3>Offline Functionality</h3>
+<p class="small">
+Most applications work fully offline without cloud dependency.
+</p>
+</div>
+
+<div class="article">
+<h3>Modern User Interface</h3>
+<p class="small">
+Minimal clean layouts focused on simplicity and smooth usability.
+</p>
+</div>
+
+<div class="article">
 <h3>Privacy Focused</h3>
 <p class="small">
 Transparent permissions and local storage focused experiences.
 </p>
 </div>
 
+<div class="article">
+<h3>Cross Device Support</h3>
+<p class="small">
+Optimized for Android phones, tablets, Fire Tablets, Android TV, and Fire TV.
+</p>
+</div>
+
 </div>
 
 </section>
+
+<!-- PLATFORM -->
+
+<section class="section">
+
+<h2>Platform Support</h2>
+
+<div class="grid">
+
+<div class="article">
+<h3>Android Phones</h3>
+<p class="small">
+Optimized for modern Android smartphones and tablets.
+</p>
+</div>
+
+<div class="article">
+<h3>Fire TV & Android TV</h3>
+<p class="small">
+Remote-friendly navigation with TV optimized layouts.
+</p>
+</div>
+
+<div class="article">
+<h3>Offline Ready</h3>
+<p class="small">
+Most apps continue working without internet connectivity.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<h2>About Orvexa Apps</h2>
+
+<p class="small">
+
+Orvexa Apps develops modern Android and Fire TV applications focused on
+performance, simplicity, reliability, and optimized user experience.
+
+<br><br>
+
+The Orvexa ecosystem includes file managers, media players,
+playlist systems, and global radio streaming applications.
+
+<br><br>
+
+Every app is carefully optimized for smooth navigation,
+lightweight performance, and modern visual design across
+phones, tablets, and TV devices.
+
+</p>
+
+</section>
+
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
@@ -509,10 +756,21 @@ Send Email
 
 <div style="margin-top:14px;">
 
-<a href="privacy-policy.html">Privacy Policy</a>
-<a href="terms.html">Terms</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+<a href="terms.html">
+Terms
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </div>
 
@@ -520,4 +778,3 @@ Send Email
 
 </body>
 </html>
-```
