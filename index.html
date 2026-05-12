@@ -81,6 +81,11 @@ margin:auto;
 padding:70px 20px;
 }
 
+h2{
+margin-bottom:22px;
+}
+
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -92,7 +97,7 @@ gap:18px;
 background:linear-gradient(145deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));
 border:1px solid rgba(255,255,255,0.08);
 padding:18px;
-border-radius:16px;
+border-radius:18px;
 transition:0.3s;
 cursor:pointer;
 }
@@ -100,6 +105,15 @@ cursor:pointer;
 .card:hover{
 transform:translateY(-6px);
 border-color:#00d5ff;
+}
+
+/* APP ICON */
+.app-icon{
+width:72px;
+height:72px;
+border-radius:18px;
+margin-bottom:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
 
 /* BUTTON */
@@ -120,10 +134,23 @@ font-size:13px;
 background:linear-gradient(90deg,#ffb347,#ffcc33);
 }
 
+/* TEXT */
 .small{
 color:#9aa0a6;
 font-size:13px;
-line-height:1.6;
+line-height:1.7;
+}
+
+/* SCREENSHOTS */
+.screenshot{
+width:100%;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.screenshot:hover{
+transform:scale(1.02);
 }
 
 /* MODAL */
@@ -141,7 +168,7 @@ padding:20px;
 
 .modal-box{
 width:100%;
-max-width:650px;
+max-width:680px;
 background:#10141c;
 border:1px solid rgba(255,255,255,0.08);
 border-radius:22px;
@@ -199,14 +226,15 @@ background:rgba(0,0,0,0.2);
 
 <nav>
 <a href="#apps">Apps</a>
+<a href="#screenshots">Screenshots</a>
 <a href="#about">About</a>
 <a href="#privacy">Privacy</a>
-<a href="#ads">app-ads.txt</a>
 <a href="#contact">Contact</a>
 </nav>
 
 </header>
 
+<!-- HERO -->
 <section class="hero">
 
 <h1>Orvexa Apps Official Portal</h1>
@@ -228,10 +256,12 @@ simplicity, and real-world usage.
 <!-- FILES -->
 <div class="card" onclick="openApp(0)">
 
+<img src="assets/icons/orvexa-files.png" class="app-icon">
+
 <h3>Orvexa Files</h3>
 
 <p class="small">
-Fast file manager for Android & Fire TV
+Fast file manager for Android & Fire TV with optimized storage management.
 </p>
 
 <a class="btn amazon"
@@ -251,13 +281,15 @@ Download APK
 
 </div>
 
-<!-- MEDIA PLAYER -->
+<!-- MEDIA -->
 <div class="card" onclick="openApp(1)">
+
+<img src="assets/icons/orvexa-media-player.png" class="app-icon">
 
 <h3>Orvexa Media Player</h3>
 
 <p class="small">
-Local media playback system
+Smooth local media playback system optimized for Android TV and Fire TV.
 </p>
 
 <a class="btn amazon"
@@ -280,10 +312,12 @@ Download APK
 <!-- FILES PRO -->
 <div class="card" onclick="openApp(2)">
 
+<img src="assets/icons/orvexa-files-pro.png" class="app-icon">
+
 <h3>Orvexa Files Pro</h3>
 
 <p class="small">
-Premium file manager (No Ads)
+Premium file manager experience with no advertisements and enhanced tools.
 </p>
 
 <a class="btn amazon"
@@ -306,10 +340,12 @@ Download APK
 <!-- PLAYLIST -->
 <div class="card" onclick="openApp(3)">
 
+<img src="assets/icons/playlist-player.png" class="app-icon">
+
 <h3>Playlist Player</h3>
 
 <p class="small">
-Custom playlist media player
+Modern playlist media player designed for fast playback and navigation.
 </p>
 
 <a class="btn amazon"
@@ -332,10 +368,12 @@ Download APK
 <!-- RADIO -->
 <div class="card" onclick="openApp(4)">
 
+<img src="assets/icons/orvexa-radio.png" class="app-icon">
+
 <h3>Orvexa Radio</h3>
 
 <p class="small">
-Global radio streaming app
+Global radio streaming application with lightweight smooth playback.
 </p>
 
 <a class="btn amazon"
@@ -359,6 +397,36 @@ Download APK
 
 </section>
 
+<!-- SCREENSHOTS -->
+<section class="section" id="screenshots">
+
+<h2>App Screenshots</h2>
+
+<div class="grid">
+
+<img src="assets/screenshots/files-1.png" class="screenshot">
+<img src="assets/screenshots/files-2.png" class="screenshot">
+<img src="assets/screenshots/files-3.png" class="screenshot">
+<img src="assets/screenshots/files-4.png" class="screenshot">
+
+<img src="assets/screenshots/player-1.png" class="screenshot">
+<img src="assets/screenshots/player-2.png" class="screenshot">
+<img src="assets/screenshots/player-3.png" class="screenshot">
+<img src="assets/screenshots/player-4.png" class="screenshot">
+
+<img src="assets/screenshots/filespro-1.png" class="screenshot">
+<img src="assets/screenshots/filespro-2.png" class="screenshot">
+<img src="assets/screenshots/filespro-3.png" class="screenshot">
+<img src="assets/screenshots/filespro-4.png" class="screenshot">
+
+<img src="assets/screenshots/radio-1.png" class="screenshot">
+<img src="assets/screenshots/radio-2.png" class="screenshot">
+<img src="assets/screenshots/radio-3.png" class="screenshot">
+
+</div>
+
+</section>
+
 <!-- ABOUT -->
 <section class="section" id="about">
 
@@ -367,6 +435,11 @@ Download APK
 <p class="small">
 Orvexa Apps is a modern ecosystem focused on fast,
 lightweight, and reliable applications for Android and Fire TV devices.
+
+<br><br>
+
+Our apps are designed with performance, user experience,
+and optimized navigation for TV devices in mind.
 </p>
 
 </section>
@@ -378,9 +451,13 @@ lightweight, and reliable applications for Android and Fire TV devices.
 
 <p class="small">
 We do not collect personal data or files.
+
 <br><br>
+
 Ads are used only for monetization.
+
 <br><br>
+
 All user data remains on device.
 </p>
 
