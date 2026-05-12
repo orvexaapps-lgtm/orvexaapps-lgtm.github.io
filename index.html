@@ -25,9 +25,29 @@
 
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="assets/icons/orvexa-files.png">
+<link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
 
 <meta name="google-site-verification" content="TgmqZNgTynFO2cSfU1LzMWZrM-QmX5GNq8is7JWSFn8" />
+
+<meta name="theme-color" content="#07090d">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Orvexa Apps",
+  "url":"https://orvexaapps-lgtm.github.io/",
+  "logo":"https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png",
+  "sameAs":[
+    "https://github.com/orvexaapps-lgtm"
+  ],
+  "contactPoint":{
+    "@type":"ContactPoint",
+    "email":"orvexaapps@gmail.com",
+    "contactType":"customer support"
+  }
+}
+</script>
 
 <style>
 
@@ -251,6 +271,16 @@ border-top:1px solid rgba(255,255,255,.08);
 background:rgba(255,255,255,.02);
 }
 
+footer a{
+color:#999;
+margin:0 10px;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#00d5ff;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -288,8 +318,10 @@ font-size:28px;
 <a href="#apps">Apps</a>
 <a href="#screenshots">Screenshots</a>
 <a href="#features">Features</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<a href="about.html">About</a>
+<a href="privacy-policy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="contact.html">Contact</a>
 </nav>
 
 </header>
@@ -320,7 +352,7 @@ offline functionality, and lightweight responsiveness.
 
 <div class="card">
 
-<img src="assets/icons/orvexa-files.png" class="app-icon">
+<img loading="lazy" src="assets/icons/orvexa-files.png" class="app-icon">
 
 <h3>Orvexa Files</h3>
 
@@ -356,7 +388,7 @@ Privacy Policy
 
 <div class="card">
 
-<img src="assets/icons/orvexa-media-player.png" class="app-icon">
+<img loading="lazy" src="assets/icons/orvexa-media-player.png" class="app-icon">
 
 <h3>Orvexa Media Player</h3>
 
@@ -392,7 +424,7 @@ Privacy Policy
 
 <div class="card">
 
-<img src="assets/icons/orvexa-files-pro.png" class="app-icon">
+<img loading="lazy" src="assets/icons/orvexa-files-pro.png" class="app-icon">
 
 <h3>Orvexa Files Pro</h3>
 
@@ -428,7 +460,7 @@ Privacy Policy
 
 <div class="card">
 
-<img src="assets/icons/playlist-player.png" class="app-icon">
+<img loading="lazy" src="assets/icons/playlist-player.png" class="app-icon">
 
 <h3>Orvexa Playlist Player</h3>
 
@@ -464,7 +496,7 @@ Privacy Policy
 
 <div class="card">
 
-<img src="assets/icons/orvexa-radio.png" class="app-icon">
+<img loading="lazy" src="assets/icons/orvexa-radio.png" class="app-icon">
 
 <h3>Orvexa Radio</h3>
 
@@ -508,21 +540,21 @@ Privacy Policy
 
 <div class="grid">
 
-<img src="assets/screenshots/files-1.png" class="screenshot">
-<img src="assets/screenshots/files-2.png" class="screenshot">
-<img src="assets/screenshots/files-3.png" class="screenshot">
-<img src="assets/screenshots/files-4.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-3.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/files-4.png" class="screenshot">
 
-<img src="assets/screenshots/player-1.png" class="screenshot">
-<img src="assets/screenshots/player-2.png" class="screenshot">
-<img src="assets/screenshots/player-3.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/player-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/player-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/player-3.png" class="screenshot">
 
-<img src="assets/screenshots/filespro-1.png" class="screenshot">
-<img src="assets/screenshots/filespro-2.png" class="screenshot">
-<img src="assets/screenshots/filespro-3.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/filespro-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/filespro-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/filespro-3.png" class="screenshot">
 
-<img src="assets/screenshots/radio-1.png" class="screenshot">
-<img src="assets/screenshots/radio-2.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/radio-1.png" class="screenshot">
+<img loading="lazy" src="assets/screenshots/radio-2.png" class="screenshot">
 
 </div>
 
@@ -582,6 +614,39 @@ Optimized for Android phones, tablets, Fire Tablets, Android TV, and Fire TV.
 
 </section>
 
+<!-- PLATFORM -->
+
+<section class="section">
+
+<h2>Platform Support</h2>
+
+<div class="grid">
+
+<div class="article">
+<h3>Android Phones</h3>
+<p class="small">
+Optimized for modern Android smartphones and tablets.
+</p>
+</div>
+
+<div class="article">
+<h3>Fire TV & Android TV</h3>
+<p class="small">
+Remote-friendly navigation with TV optimized layouts.
+</p>
+</div>
+
+<div class="article">
+<h3>Offline Ready</h3>
+<p class="small">
+Most apps continue working without internet connectivity.
+</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- ABOUT -->
 
 <section class="section" id="about">
@@ -631,7 +696,31 @@ Send Email
 </section>
 
 <footer>
+
+<p>
 © 2026 Orvexa Apps • All rights reserved
+</p>
+
+<div style="margin-top:14px;">
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+<a href="terms.html">
+Terms
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
 </footer>
 
 </body>
