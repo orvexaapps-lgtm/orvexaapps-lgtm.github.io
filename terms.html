@@ -43,6 +43,7 @@
   </header>
 
   <main id="main">
+    <button class="back-btn" onclick="goBack()">← Back</button>
     <section class="container-small">
       <h1>Terms of Use</h1>
       
@@ -161,5 +162,14 @@
     <p>&copy; 2026 Orvexa Apps. All rights reserved.</p>
   </footer>
 
+  <script>
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
 </body>
 </html>

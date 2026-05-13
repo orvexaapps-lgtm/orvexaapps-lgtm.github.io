@@ -722,3 +722,42 @@ a:focus-visible {
 .pb-1 { padding-bottom: 8px; }
 .pb-2 { padding-bottom: 16px; }
 .pb-3 { padding-bottom: 24px; }
+
+/* FLOATING BACK BUTTON */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 213, 255, 0.18);
+  border-color: #00d5ff;
+  box-shadow: 0 8px 24px rgba(0, 213, 255, 0.15);
+}
+
+.back-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .back-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+}
