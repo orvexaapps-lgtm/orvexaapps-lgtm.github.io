@@ -1,471 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Orvexa Files - Official App Page</title>
-
-<meta name="description" content="Official Orvexa Files app page. Fast lightweight file manager for Android and Fire TV devices.">
-<meta name="keywords" content="Orvexa Files, File Manager, Fire TV File Manager, Android File Manager">
-<meta name="author" content="Orvexa Apps">
-
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0b1220;
-color:#fff;
-line-height:1.7;
-}
-
-header{
-padding:18px 24px;
-background:#101827;
-position:sticky;
-top:0;
-z-index:999;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-header a{
-color:#00d5ff;
-text-decoration:none;
-font-weight:bold;
-}
-
-.container{
-max-width:1150px;
-margin:auto;
-padding:40px 20px;
-}
-
-.hero{
-display:grid;
-grid-template-columns:320px 1fr;
-gap:40px;
-align-items:center;
-}
-
-@media(max-width:850px){
-.hero{
-grid-template-columns:1fr;
-}
-}
-
-.app-icon{
-width:180px;
-height:180px;
-border-radius:38px;
-box-shadow:0 20px 60px rgba(0,0,0,0.45);
-}
-
-.hero h1{
-font-size:48px;
-margin:0;
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.badge{
-display:inline-block;
-padding:8px 14px;
-border-radius:999px;
-background:rgba(255,255,255,0.08);
-margin-right:8px;
-margin-top:12px;
-font-size:13px;
-}
-
-.btn{
-display:inline-block;
-margin-top:16px;
-margin-right:12px;
-padding:12px 18px;
-border-radius:12px;
-font-weight:bold;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.amazon{
-background:linear-gradient(90deg,#ffb347,#ffcc33);
-color:#000;
-}
-
-.download{
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
-color:#000;
-}
-
-.section{
-margin-top:70px;
-}
-
-.section h2{
-font-size:30px;
-margin-bottom:20px;
-}
-
-.card{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-padding:24px;
-border-radius:22px;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:18px;
-}
-
-.feature-box{
-background:rgba(255,255,255,0.04);
-padding:18px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.feature-box h3{
-margin-top:0;
-color:#00d5ff;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px;
-}
-
-.gallery img{
-width:100%;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.02);
-}
-
-.small{
-color:#9aa0a6;
-font-size:14px;
-}
-
-ul{
-padding-left:22px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-td{
-padding:14px;
-border-bottom:1px solid rgba(255,255,255,0.08);
-vertical-align:top;
-}
-
-footer{
-margin-top:80px;
-padding:40px;
-text-align:center;
-color:#888;
-border-top:1px solid rgba(255,255,255,0.08);
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- PRIMARY META TAGS -->
+  <title>Orvexa Files - Fast Android & Fire TV File Manager</title>
+  <meta name="description" content="Orvexa Files - Fast lightweight file manager for Android phones, tablets, Fire TV, and Android TV. Download now with APK support and offline functionality.">
+  <meta name="keywords" content="Orvexa Files, file manager, Android file manager, Fire TV file manager, APK installer">
+  <meta name="author" content="Orvexa Apps">
+  <meta name="robots" content="index, follow">
+  
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://orvexaapps-lgtm.github.io/orvexa-files.html">
+  
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Orvexa Files - Fast File Manager">
+  <meta property="og:description" content="Fast lightweight file manager for Android and Fire TV with APK support, audio player, and offline functionality.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orvexaapps-lgtm.github.io/orvexa-files.html">
+  <meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png">
+  <meta property="og:image:alt" content="Orvexa Files App Icon">
+  
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Orvexa Files - Fast File Manager">
+  <meta name="twitter:description" content="Modern file manager for Android and Fire TV devices.">
+  <meta name="twitter:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png">
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
+  
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- JSON-LD STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Orvexa Files",
+    "description": "Fast lightweight file manager for Android and Fire TV",
+    "applicationCategory": "UtilitiesApplication",
+    "url": "https://orvexaapps-lgtm.github.io/orvexa-files.html",
+    "image": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png",
+    "operatingSystem": "ANDROID",
+    "author": {
+      "@type": "Organization",
+      "name": "Orvexa Apps"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://www.amazon.com/gp/product/B0F6D8GJTP"
+    }
+  }
+  </script>
 </head>
 
 <body>
 
-<header>
-<a href="index.html">← Back to Orvexa Apps</a>
-</header>
-
-<div class="container">
-
-<!-- HERO -->
-<section class="hero">
-
-<div>
-<img src="assets/icons/orvexa-files.png" class="app-icon">
-</div>
-
-<div>
-
-<h1>Orvexa Files</h1>
-
-<p class="small">
-Fast lightweight file manager designed for Android phones, tablets, Fire TV, and Android TV devices.
-</p>
-
-<div class="badge">Android 7.0+</div>
-<div class="badge">Fire TV Supported</div>
-<div class="badge">Offline Support</div>
-
-<br>
-
-<a class="btn amazon"
-href="https://www.amazon.com/gp/product/B0F6D8GJTP"
-target="_blank">
-Amazon Store
-</a>
-
-<a class="btn download"
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-files.apk">
-Download APK
-</a>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-
-<h2>About Orvexa Files</h2>
-
-<div class="card">
-
-<p>
-Orvexa Files is a fast and modern file manager created to provide smooth file browsing and storage management across Android devices and Fire TV systems.
-</p>
-
-<p>
-The app is optimized for performance, simple navigation, TV remote support, and lightweight resource usage.
-</p>
-
-<p>
-Whether you want to manage videos, music, documents, APK files, or folders, Orvexa Files gives you a clean and responsive experience without unnecessary complexity.
-</p>
-
-</div>
-
-</section>
-
-<!-- FEATURES -->
-<section class="section">
-
-<h2>Main Features</h2>
-
-<div class="features">
-
-<div class="feature-box">
-<h3>Fast File Browsing</h3>
-<p class="small">
-Smooth and responsive file navigation optimized for low-end and high-end devices.
-</p>
-</div>
-
-<div class="feature-box">
-<h3>TV Remote Support</h3>
-<p class="small">
-Fully optimized for Fire TV and Android TV remote navigation.
-</p>
-</div>
-
-<div class="feature-box">
-<h3>Built-in Audio Player</h3>
-<p class="small">
-Play local audio files directly inside the application.
-</p>
-</div>
-
-<div class="feature-box">
-<h3>APK Installation</h3>
-<p class="small">
-Easy APK installation support with modern Android compatibility.
-</p>
-</div>
-
-<div class="feature-box">
-<h3>Offline Operation</h3>
-<p class="small">
-Works fully offline without requiring internet access.
-</p>
-</div>
-
-<div class="feature-box">
-<h3>Modern UI</h3>
-<p class="small">
-Clean lightweight interface focused on speed and usability.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- SCREENSHOTS -->
-<section class="section">
-
-<h2>Screenshots</h2>
-
-<div class="gallery">
-
-<img src="assets/screenshots/files-1.png">
-<img src="assets/screenshots/files-2.png">
-<img src="assets/screenshots/files-3.png">
-<img src="assets/screenshots/files-4.png">
-
-</div>
-
-</section>
-
-<!-- WHATS NEW -->
-<section class="section">
-
-<h2>Latest Update - Version 1.0.2</h2>
-
-<div class="card">
-
-<ul>
-
-<li>All premium-level core features are now available in the free version</li>
-
-<li>Improved file browsing and storage management performance</li>
-
-<li>Enhanced support for copy, move, rename, and delete operations</li>
-
-<li>Better media playback and file handling experience</li>
-
-<li>APK install support improvements</li>
-
-<li>Better Android TV and remote navigation compatibility</li>
-
-<li>Reduced interruptions during important file operations</li>
-
-<li>Improved overall app stability and reliability</li>
-
-<li>Bug fixes and internal optimizations</li>
-
-<li>Updated privacy policy and advertising disclosures</li>
-
-<li>Added optimized advertising support including Start.io integration</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- TECH DETAILS -->
-<section class="section">
-
-<h2>Technical Details</h2>
-
-<div class="card">
-
-<table>
-
-<tr>
-<td><b>Version</b></td>
-<td>1.0.2</td>
-</tr>
-
-<tr>
-<td><b>Release Year</b></td>
-<td>2026</td>
-</tr>
-
-<tr>
-<td><b>Developer</b></td>
-<td>Orvexa Apps</td>
-</tr>
-
-<tr>
-<td><b>ASIN</b></td>
-<td>B0F6D8GJTP</td>
-</tr>
-
-<tr>
-<td><b>App Size</b></td>
-<td>10.1 MB</td>
-</tr>
-
-<tr>
-<td><b>Minimum Android Version</b></td>
-<td>Android 7.0</td>
-</tr>
-
-<tr>
-<td><b>Supported Devices</b></td>
-<td>Android Phones, Tablets, Fire TV, Android TV</td>
-</tr>
-
-</table>
-
-</div>
-
-</section>
-
-<!-- PRIVACY -->
-<section class="section">
-
-<h2>Privacy & Security</h2>
-
-<div class="card">
-
-<p>
-Your files remain on your device.
-</p>
-
-<p>
-Orvexa Files does not collect or store personal user files.
-</p>
-
-<p>
-Advertising services may use Advertising ID for analytics and advertising personalization.
-</p>
-
-<a class="btn download"
-href="https://orvexafiles.blogspot.com/2026/04/privacy-policy-orvexa-files.html"
-target="_blank">
-Open Privacy Policy
-</a>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section class="section">
-
-<h2>Support</h2>
-
-<div class="card">
-
-<p>
-Need help or want to report an issue?
-</p>
-
-<a class="btn download"
-href="mailto:orvexaapps@gmail.com">
-Contact Support
-</a>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Orvexa Apps • All rights reserved
-</footer>
-
-</div>
-
-</body>
+  <!-- HEADER -->
+  <header role="banner">
+    <nav role="navigation">
+      <a href="index.html">← Back to Home</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <!-- HERO SECTION -->
+      <section class="grid-2" aria-labelledby="app-heading">
+        <div>
+          <img src="assets/icons/orvexa-files.png" alt="Orvexa Files - File Manager application" class="app-icon-large">
+        </div>
+        <div>
+          <h1 id="app-heading">Orvexa Files</h1>
+          <p class="text-tertiary">
+            Fast and modern file manager designed for Android phones, tablets, Fire TV, and Android TV devices with smooth performance and offline support.
+          </p>
+          
+          <div style="margin-top: 20px;">
+            <span class="badge">Android 7.0+</span>
+            <span class="badge">Fire TV Ready</span>
+            <span class="badge">Offline Support</span>
+          </div>
+
+          <div class="btn-group" style="margin-top: 24px;">
+            <a href="https://www.amazon.com/gp/product/B0F6D8GJTP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Download from Amazon Appstore">
+              Amazon Store
+            </a>
+            <a href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-files.apk" class="btn btn-primary" aria-label="Download APK file">
+              Download APK
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="article mt-4" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Orvexa Files</h2>
+        <p class="text-tertiary">
+          Orvexa Files is a fast and modern file manager created to provide smooth file browsing and storage management across Android devices and Fire TV systems. The app is optimized for performance, simple navigation, TV remote support, and lightweight resource usage.
+        </p>
+        <p class="text-tertiary">
+          Whether you want to manage videos, music, documents, APK files, or folders, Orvexa Files gives you a clean and responsive experience without unnecessary complexity.
+        </p>
+      </section>
+
+      <!-- FEATURES SECTION -->
+      <section class="mt-4" aria-labelledby="features-heading">
+        <h2 id="features-heading">Main Features</h2>
+        <div class="grid">
+          <div class="feature-box">
+            <h3>Fast File Browsing</h3>
+            <p class="text-small">Smooth and responsive file navigation optimized for all device types.</p>
+          </div>
+          <div class="feature-box">
+            <h3>TV Remote Support</h3>
+            <p class="text-small">Fully optimized for Fire TV and Android TV remote navigation.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Audio Player</h3>
+            <p class="text-small">Play local audio files directly inside the application.</p>
+          </div>
+          <div class="feature-box">
+            <h3>APK Installation</h3>
+            <p class="text-small">Easy APK installation support with modern Android compatibility.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Offline Operation</h3>
+            <p class="text-small">Works fully offline without requiring internet access.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Modern UI</h3>
+            <p class="text-small">Clean lightweight interface focused on speed and usability.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOTS SECTION -->
+      <section class="mt-4" aria-labelledby="screenshots-heading">
+        <h2 id="screenshots-heading">Screenshots</h2>
+        <div class="gallery">
+          <img loading="lazy" src="assets/screenshots/files-1.png" alt="Orvexa Files home screen">
+          <img loading="lazy" src="assets/screenshots/files-2.png" alt="Orvexa Files file browser">
+          <img loading="lazy" src="assets/screenshots/files-3.png" alt="Orvexa Files menu options">
+          <img loading="lazy" src="assets/screenshots/files-4.png" alt="Orvexa Files file operations">
+        </div>
+      </section>
+
+      <!-- TECHNICAL DETAILS -->
+      <section class="article mt-4" aria-labelledby="technical-heading">
+        <h2 id="technical-heading">Technical Details</h2>
+        <table>
+          <tr>
+            <td><strong>Version</strong></td>
+            <td>1.0.2</td>
+          </tr>
+          <tr>
+            <td><strong>Release Year</strong></td>
+            <td>2026</td>
+          </tr>
+          <tr>
+            <td><strong>Developer</strong></td>
+            <td>Orvexa Apps</td>
+          </tr>
+          <tr>
+            <td><strong>App Size</strong></td>
+            <td>~10 MB</td>
+          </tr>
+          <tr>
+            <td><strong>Minimum Android</strong></td>
+            <td>Android 7.0+</td>
+          </tr>
+          <tr>
+            <td><strong>Supported Devices</strong></td>
+            <td>Android Phones, Tablets, Fire TV, Android TV</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- PRIVACY SECTION -->
+      <section class="article mt-4" aria-labelledby="privacy-heading">
+        <h2 id="privacy-heading">Privacy & Security</h2>
+        <p class="text-tertiary">
+          Your files remain on your device. Orvexa Files does not collect or store personal user files. Advertising services may use Advertising ID for analytics and ad personalization.
+        </p>
+        <div class="btn-group" style="margin-top: 16px;">
+          <a href="https://orvexafiles.blogspot.com/2026/04/privacy-policy-orvexa-files.html" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary" aria-label="Read privacy policy">
+            Privacy Policy
+          </a>
+        </div>
+      </section>
+
+      <!-- SUPPORT SECTION -->
+      <section class="article mt-4" aria-labelledby="support-heading">
+        <h2 id="support-heading">Support & Feedback</h2>
+        <p class="text-tertiary">
+          Have questions, found a bug, or want to suggest a feature? We'd love to hear from you.
+        </p>
+        <div class="btn-group" style="margin-top: 16px;">
+          <a href="mailto:orvexaapps@gmail.com" class="btn btn-primary" aria-label="Contact support">
+            Contact Us
+          </a>
+          <a href="index.html" class="btn btn-tertiary" aria-label="Back to home page">
+            Other Apps
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 Orvexa Apps. All rights reserved.</p>
+  </footer>
 </html>
