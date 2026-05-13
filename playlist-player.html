@@ -1,375 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orvexa Playlist Player | Local Playlist Playback</title>
+  <meta name="description" content="Explore Orvexa Playlist Player, a lightweight local playlist app for Android and Fire Tablets with smooth playback, custom playlist management, and responsive controls.">
+  <meta name="keywords" content="Orvexa Playlist Player, local playlist app, Fire Tablet media player, Android playlist player">
+  <meta name="author" content="Orvexa Apps">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07090d">
 
-<title>Orvexa Playlist Player - Local Media Playlist App</title>
+  <link rel="canonical" href="https://orvexaapps-lgtm.github.io/playlist-player.html">
+  <link rel="icon" type="image/png" href="assets/icons/playlist-player.png">
 
-<meta name="description" content="Orvexa Playlist Player is a lightweight local playlist media player for Android and Fire Tablets with smooth playback and playlist management.">
+  <meta property="og:title" content="Orvexa Playlist Player | Local Playlist Playback">
+  <meta property="og:description" content="A lightweight local playlist player for Android and Fire Tablets with playlist management and smooth device-native playback.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orvexaapps-lgtm.github.io/playlist-player.html">
+  <meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/playlist-player.png">
+  <meta property="og:image:alt" content="Orvexa Playlist Player app icon">
+  <meta property="og:site_name" content="Orvexa Apps">
+  <meta property="og:locale" content="en_US">
 
-<meta name="keywords" content="Orvexa Playlist Player, Playlist Player, Fire Tablet Media Player, Android Playlist App, Local Media Player">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Orvexa Playlist Player | Local Playlist Playback">
+  <meta name="twitter:description" content="Custom local playlist playback and management for Android and Fire Tablet users.">
+  <meta name="twitter:image" content="https://orvexaapps-lgtm.github.io/assets/icons/playlist-player.png">
 
-<meta name="author" content="Orvexa Apps">
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-<link rel="canonical" href="https://orvexaapps-lgtm.github.io/playlist-player.html">
-
-<meta property="og:title" content="Orvexa Playlist Player">
-<meta property="og:description" content="Modern local playlist player for Android and Fire Tablet devices.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://orvexaapps-lgtm.github.io/playlist-player.html">
-<meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/playlist-player.png">
-
-<link rel="icon" href="assets/icons/playlist-player.png">
-
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0b1220;
-color:#fff;
-line-height:1.7;
-}
-
-header{
-padding:18px 24px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#111827;
-border-bottom:1px solid rgba(255,255,255,0.08);
-position:sticky;
-top:0;
-z-index:100;
-}
-
-header a{
-color:#aaa;
-text-decoration:none;
-margin-left:14px;
-font-size:14px;
-}
-
-header a:hover{
-color:#00d5ff;
-}
-
-.hero{
-padding:80px 20px;
-text-align:center;
-background:
-radial-gradient(circle at center,rgba(124,92,255,0.15),transparent 60%),
-radial-gradient(circle at top,rgba(0,213,255,0.18),transparent 60%);
-}
-
-.hero img{
-width:110px;
-height:110px;
-border-radius:24px;
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
-}
-
-.hero h1{
-font-size:46px;
-margin-top:20px;
-margin-bottom:10px;
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero p{
-max-width:760px;
-margin:auto;
-color:#9aa0a6;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:linear-gradient(145deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));
-border:1px solid rgba(255,255,255,0.08);
-padding:24px;
-border-radius:20px;
-}
-
-.card h2{
-margin-top:0;
-}
-
-.small{
-color:#9aa0a6;
-font-size:14px;
-}
-
-.btn{
-display:inline-block;
-padding:12px 18px;
-margin-top:10px;
-margin-right:10px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-font-size:14px;
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
-color:#000;
-}
-
-.amazon{
-background:linear-gradient(90deg,#ffb347,#ffcc33);
-}
-
-.features{
-padding-left:20px;
-}
-
-.features li{
-margin-bottom:10px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#777;
-border-top:1px solid rgba(255,255,255,0.08);
-margin-top:60px;
-}
-
-</style>
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Orvexa Playlist Player",
+    "description": "Lightweight local playlist media player for Android and Fire Tablets",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Android",
+    "url": "https://orvexaapps-lgtm.github.io/playlist-player.html",
+    "image": "https://orvexaapps-lgtm.github.io/assets/icons/playlist-player.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Orvexa Apps"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://www.amazon.com/gp/product/B0GTS87KSZ"
+    }
+  }
+  </script>
 </head>
-
 <body>
-
-<header>
-
-<div><b>Orvexa Apps</b></div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="#features">Features</a>
-<a href="#details">Details</a>
-<a href="#privacy">Privacy</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<img src="assets/icons/playlist-player.png">
-
-<h1>Orvexa Playlist Player</h1>
-
-<p>
-A lightweight local media playlist player designed for Android and Fire Tablet devices with smooth playback, playlist management, and modern navigation.
-</p>
-
-<a class="btn amazon"
-href="https://www.amazon.com/gp/product/B0GTS87KSZ"
-target="_blank">
-View on Amazon
-</a>
-
-<a class="btn"
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-playlist.apk">
-Download APK
-</a>
-
-<a class="btn"
-href="https://orvexaplaylistplayer.blogspot.com/2026/04/orvexa-playlist-player-privacy-policy.html"
-target="_blank">
-Privacy Policy
-</a>
-
-</section>
-
-<section class="container" id="features">
-
-<div class="grid">
-
-<div class="card">
-
-<h2>Key Features</h2>
-
-<ul class="features">
-
-<li>Play audio and video files stored on your device</li>
-
-<li>Create and manage custom playlists</li>
-
-<li>Smooth playback optimized for Fire Tablets</li>
-
-<li>Clean and easy-to-use interface</li>
-
-<li>Fast and lightweight performance</li>
-
-<li>Supports local media playback</li>
-
-<li>No account or subscription required</li>
-
-<li>Designed for Fire Tablet devices</li>
-
-<li>Simple playlist organization tools</li>
-
-<li>Stable and reliable playback experience</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Latest Update</h2>
-
-<p class="small">
-
-<b>Version 1.0.2</b>
-
-<br><br>
-
-• App redesigned as a Local Playlist Player
-
-<br>
-
-• Removed M3U and streaming features
-
-<br>
-
-• Added local playlist creation support
-
-<br>
-
-• Improved performance and stability
-
-<br>
-
-• Better ad handling and responsiveness
-
-<br>
-
-• Updated privacy policy
-
-<br><br>
-
-The app now focuses entirely on local media playback stored on your device.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<div class="card">
-
-<h2>About Orvexa Playlist Player</h2>
-
-<p class="small">
-
-Orvexa Playlist Player is a modern local media player built for Amazon Fire Tablets and Android devices.
-
-<br><br>
-
-The app allows users to organize personal audio and video collections into custom playlists while maintaining lightweight performance and simple navigation.
-
-<br><br>
-
-Designed specifically for local playback, the application does not provide streaming channels or internet media content. All playback is based on media files stored directly on your device.
-
-<br><br>
-
-The interface is optimized for touch controls and smooth media browsing while remaining lightweight and responsive on low-end and mid-range devices.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="container" id="details">
-
-<div class="grid">
-
-<div class="card">
-
-<h2>Technical Details</h2>
-
-<p class="small">
-
-<b>Release Date:</b> 2026
-
-<br><br>
-
-<b>Version:</b> 1.0.2
-
-<br><br>
-
-<b>App Size:</b> 7.6MB
-
-<br><br>
-
-<b>Minimum Android:</b> Android 7.0
-
-<br><br>
-
-<b>Amazon ASIN:</b> B0GTS87KSZ
-
-<br><br>
-
-<b>Developer:</b> Orvexa Apps
-
-</p>
-
-</div>
-
-<div class="card" id="privacy">
-
-<h2>Privacy & Permissions</h2>
-
-<p class="small">
-
-The app does not require user accounts or subscriptions.
-
-<br><br>
-
-Media files remain stored locally on your device.
-
-<br><br>
-
-Permissions include media access, storage access, foreground playback services, and advertising support APIs.
-
-<br><br>
-
-Internet access is used only for app-related functionality such as advertisements.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Orvexa Apps • All rights reserved
-
-</footer>
-
+  <a href="#main" class="skip-to-main">Skip to main content</a>
+
+  <header class="site-header" role="banner" data-nav>
+    <div class="logo">Orvexa Apps</div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav class="site-nav" role="navigation" aria-label="App page navigation">
+      <a href="index.html">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#details">Details</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main" class="app-page">
+    <div class="container page-shell">
+      <section class="app-hero" id="overview" aria-labelledby="app-heading">
+        <div class="app-hero-media">
+          <img src="assets/icons/playlist-player.png" alt="Orvexa Playlist Player app icon" class="app-icon-large">
+        </div>
+        <div class="app-hero-copy">
+          <div class="eyebrow">Playlist Player</div>
+          <h1 id="app-heading">Orvexa Playlist Player</h1>
+          <p>Orvexa Playlist Player is a lightweight local media app for Android and Fire Tablets focused on building custom playlists, browsing local media, and keeping playback smooth and simple.</p>
+          <div class="badge-row">
+            <span class="badge">Local Playback</span>
+            <span class="badge">Fire Tablet Ready</span>
+            <span class="badge">Android 7.0+</span>
+          </div>
+          <div class="btn-group">
+            <a href="https://www.amazon.com/gp/product/B0GTS87KSZ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on Amazon</a>
+            <a href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-playlist.apk" class="btn btn-primary">Download APK</a>
+            <a href="https://orvexaplaylistplayer.blogspot.com/2026/04/orvexa-playlist-player-privacy-policy.html" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary">Privacy Policy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading">Feature highlights</h2>
+        <div class="grid">
+          <article class="article">
+            <h3>Core playback</h3>
+            <ul class="features">
+              <li>Play local audio and video files stored directly on your device.</li>
+              <li>Create and organize custom playlists for repeat listening or viewing.</li>
+              <li>Keep navigation light and easy on Fire Tablets and Android devices.</li>
+            </ul>
+          </article>
+          <article class="article">
+            <h3>Current direction</h3>
+            <ul class="features">
+              <li>The app now focuses on local playlists rather than streaming media.</li>
+              <li>Improved responsiveness and overall playback stability.</li>
+              <li>Updated privacy handling and simplified product scope.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section" id="details" aria-labelledby="details-heading">
+        <h2 id="details-heading">Technical details</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="app-detail-list">
+              <div class="app-detail-item">
+                <div class="app-detail-label">Version</div>
+                <div class="app-detail-value">1.0.2</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">Release year</div>
+                <div class="app-detail-value">2026</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">App size</div>
+                <div class="app-detail-value">7.6 MB</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">Amazon ASIN</div>
+                <div class="app-detail-value">B0GTS87KSZ</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">Minimum Android</div>
+                <div class="app-detail-value">Android 7.0</div>
+              </div>
+            </div>
+          </article>
+          <article class="card" id="privacy">
+            <h3>Privacy and permissions</h3>
+            <p class="text-small">The app is designed for local playback and does not require an account or subscription. Media stays on device. Internet access is only needed for app-related functions such as advertising where included.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <p>&copy; 2026 Orvexa Apps. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/navigation.js" defer></script>
 </body>
 </html>

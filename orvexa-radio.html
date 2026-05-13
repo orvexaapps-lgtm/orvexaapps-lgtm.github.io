@@ -1,359 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orvexa Radio | Global Radio Streaming App</title>
+  <meta name="description" content="Explore Orvexa Radio, a lightweight Android and Fire TV radio app with global station discovery, favorites, and remote-friendly playback across phones, tablets, and TV devices.">
+  <meta name="keywords" content="Orvexa Radio, radio streaming app, Fire TV radio app, Android radio app">
+  <meta name="author" content="Orvexa Apps">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07090d">
 
-<title>Orvexa Radio - Global Radio Streaming App</title>
+  <link rel="canonical" href="https://orvexaapps-lgtm.github.io/orvexa-radio.html">
+  <link rel="icon" type="image/png" href="assets/icons/orvexa-radio.png">
 
-<meta name="description" content="Orvexa Radio is a lightweight global radio streaming application for Android and Fire TV devices with thousands of live stations worldwide.">
+  <meta property="og:title" content="Orvexa Radio | Global Radio Streaming App">
+  <meta property="og:description" content="Stream global radio stations on Android, Fire TV, and Fire Tablets with favorites, search, and background playback support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orvexaapps-lgtm.github.io/orvexa-radio.html">
+  <meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-radio.png">
+  <meta property="og:image:alt" content="Orvexa Radio app icon">
+  <meta property="og:site_name" content="Orvexa Apps">
+  <meta property="og:locale" content="en_US">
 
-<meta name="keywords" content="Orvexa Radio, Radio Streaming App, Fire TV Radio App, Android Radio App, Online Radio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Orvexa Radio | Global Radio Streaming App">
+  <meta name="twitter:description" content="A lightweight radio streaming app for Android and Fire devices with favorites, search, and TV-ready navigation.">
+  <meta name="twitter:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-radio.png">
 
-<meta name="author" content="Orvexa Apps">
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-<link rel="canonical" href="https://orvexaapps-lgtm.github.io/orvexa-radio.html">
-
-<meta property="og:title" content="Orvexa Radio">
-<meta property="og:description" content="Stream thousands of radio stations worldwide on Android and Fire TV devices.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://orvexaapps-lgtm.github.io/orvexa-radio.html">
-<meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-radio.png">
-
-<link rel="icon" href="assets/icons/orvexa-radio.png">
-
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0b1220;
-color:#fff;
-line-height:1.7;
-}
-
-header{
-padding:18px 24px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#111827;
-border-bottom:1px solid rgba(255,255,255,0.08);
-position:sticky;
-top:0;
-z-index:100;
-}
-
-header a{
-color:#aaa;
-text-decoration:none;
-margin-left:14px;
-font-size:14px;
-}
-
-header a:hover{
-color:#00d5ff;
-}
-
-.hero{
-padding:80px 20px;
-text-align:center;
-background:
-radial-gradient(circle at center,rgba(124,92,255,0.15),transparent 60%),
-radial-gradient(circle at top,rgba(0,213,255,0.18),transparent 60%);
-}
-
-.hero img{
-width:110px;
-height:110px;
-border-radius:24px;
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
-}
-
-.hero h1{
-font-size:46px;
-margin-top:20px;
-margin-bottom:10px;
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero p{
-max-width:760px;
-margin:auto;
-color:#9aa0a6;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:linear-gradient(145deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));
-border:1px solid rgba(255,255,255,0.08);
-padding:24px;
-border-radius:20px;
-}
-
-.card h2{
-margin-top:0;
-}
-
-.small{
-color:#9aa0a6;
-font-size:14px;
-}
-
-.btn{
-display:inline-block;
-padding:12px 18px;
-margin-top:10px;
-margin-right:10px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-font-size:14px;
-background:linear-gradient(90deg,#00d5ff,#7c5cff);
-color:#000;
-}
-
-.amazon{
-background:linear-gradient(90deg,#ffb347,#ffcc33);
-}
-
-.features{
-padding-left:20px;
-}
-
-.features li{
-margin-bottom:10px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#777;
-border-top:1px solid rgba(255,255,255,0.08);
-margin-top:60px;
-}
-
-</style>
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Orvexa Radio",
+    "description": "Lightweight global radio streaming application for Android and Fire TV devices",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Android",
+    "url": "https://orvexaapps-lgtm.github.io/orvexa-radio.html",
+    "image": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-radio.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Orvexa Apps"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://www.amazon.com/gp/product/B0CWS28SXJ"
+    }
+  }
+  </script>
 </head>
-
 <body>
-
-<header>
-
-<div><b>Orvexa Apps</b></div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="#features">Features</a>
-<a href="#details">Details</a>
-<a href="#privacy">Privacy</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<img src="assets/icons/orvexa-radio.png">
-
-<h1>Orvexa Radio</h1>
-
-<p>
-Stream thousands of live radio stations worldwide with a lightweight and modern radio experience optimized for Android, Fire TV, and Fire Tablet devices.
-</p>
-
-<a class="btn amazon"
-href="https://www.amazon.com/gp/product/B0CWS28SXJ"
-target="_blank">
-View on Amazon
-</a>
-
-<a class="btn"
-href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-radio.apk">
-Download APK
-</a>
-
-<a class="btn"
-href="https://orvexaradio.blogspot.com/2026/04/ovexa-radio-privacy-policy-privacy.html"
-target="_blank">
-Privacy Policy
-</a>
-
-</section>
-
-<section class="container" id="features">
-
-<div class="grid">
-
-<div class="card">
-
-<h2>Key Features</h2>
-
-<ul class="features">
-
-<li>Stream thousands of live radio stations worldwide</li>
-
-<li>Save favorite stations for quick access</li>
-
-<li>Search by country, language, or genre</li>
-
-<li>Optimized layouts for Fire TV and Fire Tablets</li>
-
-<li>Background playback support</li>
-
-<li>Clean and easy-to-use interface</li>
-
-<li>Discover music, news, and podcasts globally</li>
-
-<li>No account required</li>
-
-<li>Privacy-focused lightweight experience</li>
-
-<li>Optimized AdMob ad integration</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>App Overview</h2>
-
-<p class="small">
-
-<b>Version 1.0.2</b>
-
-<br><br>
-
-Orvexa Radio provides access to thousands of public radio stations from around the world.
-
-<br><br>
-
-The application is designed for lightweight streaming performance with modern layouts optimized for Android phones, Fire Tablets, and Fire TV devices.
-
-<br><br>
-
-Users can browse radio stations by language, country, and genre while saving favorite stations for faster access later.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<div class="card">
-
-<h2>About Orvexa Radio</h2>
-
-<p class="small">
-
-Orvexa Radio is a lightweight internet radio streaming application built for users who enjoy discovering global music, podcasts, live radio, and news content.
-
-<br><br>
-
-The app offers fast station discovery with optimized playback performance and smooth navigation for both touch devices and TV remote controls.
-
-<br><br>
-
-Users can search thousands of public stations from the Radio Browser community and build their own personalized favorites collection.
-
-<br><br>
-
-The interface focuses on simplicity, fast navigation, and uninterrupted listening across Android and Fire OS devices.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="container" id="details">
-
-<div class="grid">
-
-<div class="card">
-
-<h2>Technical Details</h2>
-
-<p class="small">
-
-<b>Release Date:</b> 2026
-
-<br><br>
-
-<b>Version:</b> 1.0.2
-
-<br><br>
-
-<b>App Size:</b> 5.8MB
-
-<br><br>
-
-<b>Minimum Android:</b> Android 7.0
-
-<br><br>
-
-<b>Amazon ASIN:</b> B0CWS28SXJ
-
-<br><br>
-
-<b>Developer:</b> Orvexa Apps
-
-</p>
-
-</div>
-
-<div class="card" id="privacy">
-
-<h2>Privacy & Permissions</h2>
-
-<p class="small">
-
-No account or sign-in is required to use Orvexa Radio.
-
-<br><br>
-
-The app may use advertising identifiers for analytics and advertising support.
-
-<br><br>
-
-Permissions include network access, media playback services, and background playback support.
-
-<br><br>
-
-Stations streamed through the application belong to their respective owners.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Orvexa Apps • All rights reserved
-
-</footer>
-
+  <a href="#main" class="skip-to-main">Skip to main content</a>
+
+  <header class="site-header" role="banner" data-nav>
+    <div class="logo">Orvexa Apps</div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav class="site-nav" role="navigation" aria-label="App page navigation">
+      <a href="index.html">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#details">Details</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main" class="app-page">
+    <div class="container page-shell">
+      <section class="app-hero" id="overview" aria-labelledby="app-heading">
+        <div class="app-hero-media">
+          <img src="assets/icons/orvexa-radio.png" alt="Orvexa Radio app icon" class="app-icon-large">
+        </div>
+        <div class="app-hero-copy">
+          <div class="eyebrow">Radio Streaming</div>
+          <h1 id="app-heading">Orvexa Radio</h1>
+          <p>Orvexa Radio brings global radio station discovery to Android, Fire TV, and Fire Tablets with fast search, favorites support, lightweight playback, and layouts that remain comfortable on both touch and TV screens.</p>
+          <div class="badge-row">
+            <span class="badge">Live Radio</span>
+            <span class="badge">Favorites</span>
+            <span class="badge">Fire TV Ready</span>
+          </div>
+          <div class="btn-group">
+            <a href="https://www.amazon.com/gp/product/B0CWS28SXJ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on Amazon</a>
+            <a href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.0.0/orvexa-radio.apk" class="btn btn-primary">Download APK</a>
+            <a href="https://orvexaradio.blogspot.com/2026/04/ovexa-radio-privacy-policy-privacy.html" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary">Privacy Policy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading">Streaming highlights</h2>
+        <div class="grid">
+          <article class="article">
+            <h3>Discovery features</h3>
+            <ul class="features">
+              <li>Browse and search thousands of public radio stations.</li>
+              <li>Filter or discover stations by language, country, or genre.</li>
+              <li>Save favorite stations for quicker repeat listening.</li>
+            </ul>
+          </article>
+          <article class="article">
+            <h3>Playback behavior</h3>
+            <ul class="features">
+              <li>Background playback support for longer listening sessions.</li>
+              <li>Responsive layouts for Android phones, Fire Tablets, and Fire TV.</li>
+              <li>Lightweight rendering with simple, remote-friendly navigation.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section" id="details" aria-labelledby="details-heading">
+        <h2 id="details-heading">Technical details</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="app-detail-list">
+              <div class="app-detail-item">
+                <div class="app-detail-label">Version</div>
+                <div class="app-detail-value">1.0.2</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">Release year</div>
+                <div class="app-detail-value">2026</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">App size</div>
+                <div class="app-detail-value">5.8 MB</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">Amazon ASIN</div>
+                <div class="app-detail-value">B0CWS28SXJ</div>
+              </div>
+              <div class="app-detail-item">
+                <div class="app-detail-label">Minimum Android</div>
+                <div class="app-detail-value">Android 7.0</div>
+              </div>
+            </div>
+          </article>
+          <article class="card" id="privacy">
+            <h3>Privacy and permissions</h3>
+            <p class="text-small">No account is required. The app may use advertising identifiers for analytics or advertising. Network access and playback services are needed to stream station content and maintain background listening behavior.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+    <p>&copy; 2026 Orvexa Apps. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/navigation.js" defer></script>
 </body>
 </html>
