@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Orvexa Share app icon</title>
+  <desc id="desc">Dark app icon with connected transfer nodes</desc>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="448" x2="448" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111f"/>
+      <stop offset="0.52" stop-color="#0b2840"/>
+      <stop offset="1" stop-color="#12184a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="129" y1="363" x2="383" y2="109" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00d5ff"/>
+      <stop offset="1" stop-color="#7c5cff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M136 322h240" stroke="#163a55" stroke-width="58" stroke-linecap="round"/>
+  <path d="M151 322h210" stroke="url(#accent)" stroke-width="34" stroke-linecap="round"/>
+  <path d="M290 235l71 87-71 87" fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <circle cx="157" cy="190" r="62" fill="#0e1728" stroke="url(#accent)" stroke-width="18"/>
+    <circle cx="355" cy="190" r="62" fill="#0e1728" stroke="url(#accent)" stroke-width="18"/>
+    <circle cx="157" cy="322" r="62" fill="#0e1728" stroke="url(#accent)" stroke-width="18"/>
+  </g>
+  <path d="M209 206l94-1M209 306l94-80" stroke="#c9f7ff" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="157" cy="190" r="20" fill="#ffffff"/>
+  <circle cx="355" cy="190" r="20" fill="#ffffff"/>
+  <circle cx="157" cy="322" r="20" fill="#ffffff"/>
+</svg>
