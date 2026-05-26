@@ -29,8 +29,6 @@
     button.setAttribute("aria-controls", navId);
 
     function setExpanded(isOpen) {
-      var hiddenOnMobile = mobileQuery.matches ? !isOpen : false;
-
       header.classList.toggle("is-open", isOpen);
       button.setAttribute("aria-expanded", String(isOpen));
       button.setAttribute("aria-haspopup", "menu");
@@ -38,7 +36,6 @@
         "aria-label",
         isOpen ? "Close navigation menu" : "Open navigation menu"
       );
-      nav.setAttribute("aria-hidden", String(hiddenOnMobile));
     }
 
     function closeMenu(restoreFocus) {
@@ -107,9 +104,6 @@
     function syncMenuState() {
       if (!mobileQuery.matches) {
         closeMenu(false);
-        nav.setAttribute("aria-hidden", "false");
-      } else if (!header.classList.contains("is-open")) {
-        nav.setAttribute("aria-hidden", "true");
       }
     }
 
