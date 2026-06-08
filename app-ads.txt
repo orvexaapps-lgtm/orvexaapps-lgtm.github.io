@@ -128,3 +128,13 @@ appnexus.com, 16525, RESELLER, f5ab79cb980f11d1
 blasto.ai, 585, RESELLER, 7e936b1feafdaa61
 media.net, 8CUIQQN13, RESELLER
 appnexus.com, 16641, RESELLER, f5ab79cb980f11d1
+richaudience.com, h44h1ypblk, reseller
+rubiconproject.com, 13510, reseller
+appnexus.com, 8233, reseller
+adform.com, 1942, reseller
+lijit.com, 583722, reseller, fafdf38b16bf6b2b
+rubiconproject.com, 27963, reseller, 0bfd66d529a55807
+smartadserver.com, 5791, reseller, 060d053dcf45cbf3
+sharethrough.com, 5791, reseller, d53b998a7bd4ecd2
+adorphic.com, 4051, reseller
+triplelift.com, 13567, reseller, 6c33edb13117fd86
