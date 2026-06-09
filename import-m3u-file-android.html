@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Import M3U Files on Android Devices | Orvexa Apps</title>
+  <meta name="description" content="Step-by-step guide to importing M3U playlist files on Android phones, tablets, Fire TV, and Android TV devices with Orvexa TV and other players.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#07090d">
+  <link rel="canonical" href="https://orvexaapps-lgtm.github.io/import-m3u-file-android.html">
+  <link rel="icon" type="image/png" href="assets/icons/orvexa-tv.png">
+  <meta property="og:title" content="How to Import M3U Files on Android Devices">
+  <meta property="og:description" content="Learn to import M3U playlist files to Android phones, tablets, Fire TV, and Android TV using Orvexa TV and file management.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orvexaapps-lgtm.github.io/import-m3u-file-android.html">
+  <meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-tv.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-to-main">Skip to main content</a>
+  <header class="site-header" role="banner" data-nav>
+    <div class="logo">Orvexa Apps</div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="sr-only">Toggle navigation</span></button>
+    <nav class="site-nav" role="navigation" aria-label="Article navigation"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><a href="orvexa-tv.html">Orvexa TV</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main id="main"><div class="container page-shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><span>Import M3U Files</span></nav>
+    <header class="page-header"><div class="eyebrow">File Import Guide</div><h1>How to import M3U files on Android devices</h1><p class="page-lead">M3U files are plain text playlist files containing channel lists and stream URLs. This guide shows how to import M3U files on Android phones, tablets, Fire TV, and Android TV using Orvexa TV and standard Android file management.</p></header>
+    <div class="article-layout"><article>
+      <section class="page-section"><h2>Get an M3U file on your device</h2><p>Before importing, you need an M3U file saved to your Android device storage. You can get M3U files by:</p><ul class="features"><li><strong>Download via browser:</strong> If someone shares an M3U download link, open it in your browser and save it to Downloads or a dedicated Playlists folder.</li><li><strong>Email attachment:</strong> Receive an M3U file via email and save it to device storage using your email app.</li><li><strong>File transfer:</strong> Transfer an M3U file from a computer to your device using USB, Wi-Fi file sharing, or cloud storage.</li><li><strong>Text editor:</strong> Create an M3U file directly on Android using a text editor, then save it with .m3u extension.</li></ul></section>
+      <section class="page-section"><h2>Import M3U into Orvexa TV</h2><ol class="steps"><li>Open Orvexa TV on your Android device.</li><li>Navigate to Playlist or Settings menu (location varies by device type).</li><li>Tap "Import Playlist", "Add Local File", or similar option.</li><li>A file browser will open. Navigate to your Downloads, Documents, or custom folder where the M3U file is saved.</li><li>Select the M3U file by tapping it.</li><li>Orvexa TV will parse the file and import all channels and stream URLs.</li><li>Channels appear in your channel list, ready for playback.</li></ol></section>
+      <section class="page-section"><h2>Troubleshooting import issues</h2><p><strong>File not found:</strong> Ensure the M3U file is saved in a location your file picker can access (usually Downloads, Documents, or a custom folder). Check storage permissions in Android settings.</p><p><strong>File not recognized:</strong> Verify the file has the .m3u extension. If it's named "playlist.txt", rename it to "playlist.m3u" using a file manager or text editor.</p><p><strong>Empty playlist after import:</strong> The M3U file may be empty or use an unsupported format. Check the file with a text editor to confirm it contains valid channel entries.</p><p><strong>Playback fails after import:</strong> Stream URLs in the M3U file may be offline or invalid. Try another M3U playlist to confirm. See our <a href="android-tv-streaming-troubleshooting.html">streaming troubleshooting guide</a> for more help.</p></section>
+      <section class="page-section"><h2>M3U file format basics</h2><p>An M3U file is a plain text file. If you open it in a text editor, you'll see lines like:</p><p style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; overflow-x: auto;"><code>#EXTM3U<br>#EXTINF:-1, Channel Name<br>http://stream.url/here.m3u8<br>#EXTINF:-1, Another Channel<br>http://another.stream.url/stream</code></p><p>Each channel entry has an information line (#EXTINF) followed by a stream URL. Orvexa TV reads and parses this automatically when you import.</p></section>
+      <section class="page-section"><h2>Device-specific tips</h2><p><strong>Android TV and Fire TV:</strong> Use Orvexa Files or your TV's native file manager to navigate. When using a remote control, press OK/Select to confirm file selection.</p><p><strong>Fire Tablets:</strong> Use the tablet interface with touch file browser. Tap and hold to open context menus if available.</p><p><strong>Android phones and tablets:</strong> Use touch gestures to browse files. Long-press folders to open context menus or use the standard file browser navigation.</p></section>
+      <section class="page-section"><h2>FAQ</h2><div class="faq-list"><details><summary>Can I import multiple M3U files?</summary><p>Yes. Each M3U file import adds channels to Orvexa TV. You can have multiple playlists loaded at once and switch between them.</p></details><details><summary>How do I rename an M3U file?</summary><p>Use a file manager app (like Orvexa Files) to browse to the M3U file, then use the rename option. Some file managers require long-pressing the file to see rename.</p></details><details><summary>What if the M3U file has channels with no working streams?</summary><p>Some playlists may include outdated or broken stream URLs. Orvexa TV will show the channels, but playback will fail if the URL is offline. Try updating your playlist or switching to a different M3U source.</p></details><details><summary>Can I edit an M3U file on my Android device?</summary><p>Yes, using a text editor app. Open the M3U file with a text editor, make changes, and save. Changes will apply when you import or reload the playlist in Orvexa TV.</p></details></div></section>
+    </article><aside class="article-sidebar info-panel"><h2>Related</h2><ul class="link-list"><li><a href="orvexa-tv.html">Orvexa TV App</a></li><li><a href="iptv-m3u-playlist-guide.html">IPTV & M3U Guide</a></li><li><a href="orvexa-files.html">Orvexa Files Manager</a></li><li><a href="transfer-files-android-tv.html">Transfer Files to Android TV</a></li></ul></aside></div>
+  </div></main>
+  <footer role="contentinfo"><p>&copy; 2026 Orvexa Apps. <a href="tutorials.html">Tutorials</a> | <a href="privacy-policy.html">Privacy</a> | <a href="terms.html">Terms</a></p></footer>
+  <script src="assets/js/navigation.js" defer></script>
+</body>
+</html>

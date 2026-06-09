@@ -499,6 +499,62 @@
 
         </article>
 
+        <!-- ORVEXA TV -->
+
+        <article class="card">
+
+          <img loading="lazy"
+               decoding="async"
+               src="assets/icons/orvexa-tv.png"
+               class="app-icon"
+               alt="Orvexa TV app icon">
+
+          <div class="card-content">
+
+            <h3>Orvexa TV</h3>
+
+            <p class="text-small">
+              Modern IPTV and M3U player for Android TV,
+              Google TV, Fire TV, phones and tablets
+              with playlist management, EPG support,
+              and smooth Media3-powered playback.
+            </p>
+
+          </div>
+
+          <div class="btn-group">
+
+            <a href="orvexa-tv.html"
+               class="btn btn-primary"
+               aria-label="View Orvexa TV details">
+
+               Details
+
+            </a>
+
+            <a href="https://www.amazon.com/s?k=Orvexa+TV"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary"
+               aria-label="Open Orvexa TV on Amazon"
+               onclick="showAmazonMessage(event)">
+
+               Amazon
+
+            </a>
+
+            <a href="https://github.com/orvexaapps-lgtm/orvexaapps-lgtm.github.io/releases/download/v1.3.0/orvexa-tv.apk"
+               class="btn btn-tertiary"
+               aria-label="Download Orvexa TV APK">
+
+               Download
+
+            </a>
+
+          </div>
+
+        </article>
+
       </div>
 
     </section>
@@ -857,6 +913,13 @@
   </footer>
 
   <script src="assets/js/navigation.js" defer></script>
+
+  <script>
+    function showAmazonMessage(event) {
+      event.preventDefault();
+      alert("Orvexa TV is not currently available on Amazon. Please download the APK directly using the Download APK button.");
+    }
+  </script>
 
 </body>
 </html>
