@@ -3,23 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
   <title>How Android File Permissions Work | Orvexa Apps</title>
-  <meta name="description" content="Learn how Android file permissions work for storage, photos, videos, audio, document access, APK installation, and Android TV file managers.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Learn Android file permissions for storage, photos, videos, audio, document access, USB files, APK installation, and Android TV file managers.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#07090d">
   <link rel="canonical" href="https://orvexaapps-lgtm.github.io/android-file-permissions-explained.html">
+  <link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
+  <meta property="og:title" content="How Android File Permissions Work">
+  <meta property="og:description" content="Learn Android file permissions for storage, photos, videos, audio, document access, USB files, APK installation, and Android TV file managers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orvexaapps-lgtm.github.io/android-file-permissions-explained.html">
+  <meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png">
+  <meta property="og:image:alt" content="Orvexa Files app icon">
+  <meta property="og:site_name" content="Orvexa Apps">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Android File Permissions Work">
+  <meta name="twitter:description" content="Learn Android file permissions for storage, photos, videos, audio, document access, USB files, APK installation, and Android TV file managers.">
+  <meta name="twitter:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How Android file permissions work for file managers, media apps, and APK installers",
+      "description": "Learn Android file permissions for storage, photos, videos, audio, document access, USB files, APK installation, and Android TV file managers.",
+      "image": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Orvexa Apps",
+        "url": "https://orvexaapps-lgtm.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Orvexa Apps",
+        "url": "https://orvexaapps-lgtm.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png"
+        }
+      },
+      "datePublished": "2026-06-15",
+      "dateModified": "2026-06-15",
+      "mainEntityOfPage": "https://orvexaapps-lgtm.github.io/android-file-permissions-explained.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://orvexaapps-lgtm.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://orvexaapps-lgtm.github.io/tutorials.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "File permissions",
+          "item": "https://orvexaapps-lgtm.github.io/android-file-permissions-explained.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does a file manager need storage permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It needs access to list, open, move, rename, or delete files in user-accessible storage locations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is install unknown apps a normal permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a special access setting for APK installation. Keep it off unless you are actively installing a trusted APK."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do permissions differ by Android version?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android has added more privacy controls over time, so newer versions separate media and file access more carefully."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I grant every permission an app requests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Grant permissions only when they match a feature you understand and intend to use."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-to-main">Skip to main content</a>
-  <header class="site-header" role="banner" data-nav><div class="logo">Orvexa Apps</div><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="sr-only">Toggle navigation</span></button><nav class="site-nav" role="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><a href="install-apk-safely.html">APK Safety</a><a href="orvexa-files.html">Files</a></nav></header>
-  <main id="main"><div class="container page-shell">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><span>File permissions</span></nav>
-    <header class="page-header"><div class="eyebrow">Permissions</div><h1>How Android file permissions work</h1><p class="page-lead">Modern Android separates storage access by purpose. A file manager needs permission to show files, a media player needs permission to read media, and an installer needs permission only when installing an APK.</p></header>
-    <section class="page-section"><h2>Common permission types</h2><div class="grid"><article class="feature-box"><h3>Photos and videos</h3><p class="text-small">Allows an app to find and open image or video files.</p></article><article class="feature-box"><h3>Music and audio</h3><p class="text-small">Allows local players to list and play audio files.</p></article><article class="feature-box"><h3>Files and folders</h3><p class="text-small">Used by file managers to browse documents, APKs, archives, and storage directories.</p></article><article class="feature-box"><h3>Install unknown apps</h3><p class="text-small">Lets one selected app request APK installation. Keep it disabled when not needed.</p></article></div></section>
-    <section class="page-section"><h2>Permission safety checklist</h2><ol class="steps"><li>Grant permissions only when the app feature requires them.</li><li>Review permissions again after app updates.</li><li>Remove unknown-app installation access after sideloading.</li><li>Use app pages and privacy policies to understand why access is requested.</li></ol></section>
-  </div></main>
-  <footer role="contentinfo"><p>&copy; 2026 Orvexa Apps. <a href="install-apk-safely.html">Install APK safely</a> | <a href="privacy-policy.html">Privacy</a></p></footer>
+  <header class="site-header" role="banner" data-nav>
+    <div class="logo">Orvexa Apps</div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav class="site-nav" role="navigation" aria-label="Article navigation"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><a href="orvexa-files.html">Orvexa Files</a><a href="troubleshooting.html">Help</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main id="main">
+    <div class="container page-shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><span>File permissions</span></nav>
+      <header class="page-header">
+        <div class="eyebrow">Permissions</div>
+        <h1>How Android file permissions work for file managers, media apps, and APK installers</h1>
+        <p class="page-lead">Modern Android separates file access by purpose. A file manager, media player, transfer tool, and APK installer may all need different permissions for different reasons.</p>
+      </header>
+      <div class="article-layout">
+        <article>
+          <section class="page-section">
+            <h2>Introduction</h2>
+<p>Android file permissions have changed over time. Older apps often asked for broad storage access. Newer Android versions separate photos, videos, audio, documents, app-specific folders, and install access more carefully. This is better for privacy, but it can be confusing when a file manager sees one folder and a media player sees another.</p><p>On Android TV and Fire TV, permissions matter even more because users often work with APK installers, USB drives, transferred videos, playlists, and local media. If an app cannot see a file, the problem may be a permission prompt, a system file picker limitation, a USB mount issue, or a storage area Android protects by design.</p>
+          </section>
+          <section class="page-section">
+            <h2>Step-by-step permission review</h2>
+<ol class="steps"><li>Open Android settings and find the affected app under Apps or Applications.</li><li>Review allowed permissions such as files, photos, videos, music, notifications, and special app access.</li><li>Grant access only when you are using a feature that needs it, such as browsing local folders or importing a playlist file.</li><li>For APK installation, enable install unknown apps only for the trusted file manager or browser you are using.</li><li>After installing, disable unknown-app access again.</li><li>If files remain hidden, try the system file picker or move the file to Downloads or Documents.</li></ol>
+          </section>
+          <section class="page-section">
+            <h2>Common permission types</h2>
+<div class="grid"><article class="feature-box"><h3>Photos and videos</h3><p class="text-small">Allows apps to find and open image or video media.</p></article><article class="feature-box"><h3>Music and audio</h3><p class="text-small">Allows local players to list and play audio files.</p></article><article class="feature-box"><h3>Files and folders</h3><p class="text-small">Used by file managers to browse documents, APKs, archives, and storage directories.</p></article><article class="feature-box"><h3>Install unknown apps</h3><p class="text-small">Lets one selected app request APK installation. Keep it disabled when not needed.</p></article></div>
+          </section>
+          <section class="page-section">
+            <h2>Safety recommendations</h2>
+<p>Grant permissions based on the feature you are using, not because an app asks loudly. A file manager needs storage access to browse files. A media player needs media access to play local files. A radio app needs network access to stream. A simple app asking for unrelated sensitive access deserves more scrutiny.</p><p>Review permissions after major app updates. If you stop using a feature, remove the permission. On shared TVs, pay special attention to install unknown apps because it can allow future APK installs through that same app.</p>
+          </section>
+          <section class="page-section">
+            <h2>Troubleshooting</h2>
+<div class="faq-list"><details open><summary>The app cannot see my file</summary><p>Move the file to Downloads or Documents, grant storage permission, or use the system file picker if the app provides one.</p></details><details><summary>APK install permission is missing</summary><p>Look under Special app access or Security. Menu names vary by Android TV brand and Fire OS version.</p></details><details><summary>USB files do not appear</summary><p>Confirm the drive is mounted, the file system is supported, and the app has storage access.</p></details></div>
+          </section>
+          <section class="page-section" id="faq">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-list"><details open>
+              <summary>Why does a file manager need storage permission?</summary>
+              <p>It needs access to list, open, move, rename, or delete files in user-accessible storage locations.</p>
+            </details>
+            <details>
+              <summary>Is install unknown apps a normal permission?</summary>
+              <p>It is a special access setting for APK installation. Keep it off unless you are actively installing a trusted APK.</p>
+            </details>
+            <details>
+              <summary>Why do permissions differ by Android version?</summary>
+              <p>Android has added more privacy controls over time, so newer versions separate media and file access more carefully.</p>
+            </details>
+            <details>
+              <summary>Should I grant every permission an app requests?</summary>
+              <p>No. Grant permissions only when they match a feature you understand and intend to use.</p>
+            </details></div>
+          </section>
+          <section class="page-section">
+            <h2>Summary and next steps</h2>
+            <p>Permissions explain many file access problems. Next, read <a href="install-apk-safely.html">the APK installation guide</a> or <a href="orvexa-files-demo-video.html">watch the Orvexa Files demo</a> to see local file management in context.</p>
+          </section>
+        </article>
+        <aside class="article-sidebar info-panel">
+          <h2>Related guides</h2>
+          <ul class="link-list"><li><a href="orvexa-files.html">Orvexa Files app page</a></li>
+              <li><a href="orvexa-files-demo-video.html">Orvexa Files demo video</a></li>
+              <li><a href="install-apk-safely.html">Install APK files safely</a></li>
+              <li><a href="usb-otg-android-guide.html">USB OTG guide</a></li>
+              <li><a href="privacy-policy.html">Privacy policy</a></li></ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo">
+    <div class="footer-sitemap" aria-label="Footer navigation">
+      <div>
+        <p class="footer-heading">Company</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Tutorials</p>
+        <div class="footer-links">
+          <a href="tutorials.html">Tutorial Hub</a>
+          <a href="transfer-files-android-tv.html">Transfer Files</a>
+          <a href="install-apk-safely.html">APK Safety</a>
+          <a href="fix-android-tv-storage-full.html">Storage Help</a>
+          <a href="speed-up-android-tv.html">Performance</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Video Guides</p>
+        <div class="footer-links">
+          <a href="orvexa-files-demo-video.html">Files Demo</a>
+          <a href="android-tv-storage-fix-video.html">Storage Fix</a>
+          <a href="stop-background-apps-android-tv-video.html">Background Apps</a>
+          <a href="orvexa-tv-demo-video.html">Orvexa TV Demo</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Apps</p>
+        <div class="footer-links">
+          <a href="orvexa-share.html">Orvexa Share</a>
+          <a href="orvexa-files.html">Orvexa Files</a>
+          <a href="files-pro.html">Orvexa Files Pro</a>
+          <a href="media-player.html">Media Player</a>
+          <a href="orvexa-radio.html">Orvexa Radio</a>
+          <a href="orvexa-tv.html">Orvexa TV</a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2026 Orvexa Apps. All rights reserved.</p>
+  </footer>
   <script src="assets/js/navigation.js" defer></script>
 </body>
 </html>

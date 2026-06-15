@@ -3,23 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Internal vs External Storage on Android | Orvexa Apps</title>
-  <meta name="description" content="Understand the difference between Android internal storage, external storage, USB drives, app data, downloads, cache, and media folders.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Internal vs External Storage on Android TV | Orvexa Apps</title>
+  <meta name="description" content="Understand Android internal storage, shared storage, USB drives, SD cards, app data, cache, downloads, and safe cleanup decisions.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#07090d">
   <link rel="canonical" href="https://orvexaapps-lgtm.github.io/internal-vs-external-storage-android.html">
+  <link rel="icon" type="image/png" href="assets/icons/orvexa-files.png">
+  <meta property="og:title" content="Internal vs External Storage on Android TV">
+  <meta property="og:description" content="Understand Android internal storage, shared storage, USB drives, SD cards, app data, cache, downloads, and safe cleanup decisions.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://orvexaapps-lgtm.github.io/internal-vs-external-storage-android.html">
+  <meta property="og:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png">
+  <meta property="og:image:alt" content="Orvexa Files app icon">
+  <meta property="og:site_name" content="Orvexa Apps">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Internal vs External Storage on Android TV">
+  <meta name="twitter:description" content="Understand Android internal storage, shared storage, USB drives, SD cards, app data, cache, downloads, and safe cleanup decisions.">
+  <meta name="twitter:image" content="https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Internal vs external storage on Android, Android TV, and Fire TV",
+      "description": "Understand Android internal storage, shared storage, USB drives, SD cards, app data, cache, downloads, and safe cleanup decisions.",
+      "image": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Orvexa Apps",
+        "url": "https://orvexaapps-lgtm.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Orvexa Apps",
+        "url": "https://orvexaapps-lgtm.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://orvexaapps-lgtm.github.io/assets/icons/orvexa-files.png"
+        }
+      },
+      "datePublished": "2026-06-15",
+      "dateModified": "2026-06-15",
+      "mainEntityOfPage": "https://orvexaapps-lgtm.github.io/internal-vs-external-storage-android.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://orvexaapps-lgtm.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://orvexaapps-lgtm.github.io/tutorials.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Internal vs external storage",
+          "item": "https://orvexaapps-lgtm.github.io/internal-vs-external-storage-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is external storage always removable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Android sometimes uses external storage to mean shared user-accessible storage, even when it is physically internal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I move apps to USB on Android TV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only on devices and Android versions that explicitly support it. Many TV devices still need apps on internal storage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is cache safe to delete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually yes, but clear it selectively. The app may load more slowly while it rebuilds cache."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What belongs on USB storage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Personal videos, music, documents, backups, and playlist files are good candidates when the device reads the drive reliably."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-to-main">Skip to main content</a>
-  <header class="site-header" role="banner" data-nav><div class="logo">Orvexa Apps</div><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="sr-only">Toggle navigation</span></button><nav class="site-nav" role="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><a href="orvexa-files.html">Files</a><a href="fix-android-tv-storage-full.html">Storage</a></nav></header>
-  <main id="main"><div class="container page-shell">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><span>Internal vs external storage</span></nav>
-    <header class="page-header"><div class="eyebrow">Storage Education</div><h1>Internal storage vs external storage on Android</h1><p class="page-lead">Android uses storage terms in a confusing way. Internal storage is built into the device. External storage can mean shared media folders, removable USB storage, or an SD card depending on the device.</p></header>
-    <section class="page-section"><h2>Storage types explained</h2><div class="comparison-table"><table><thead><tr><th>Storage area</th><th>What it contains</th><th>Can you delete it?</th></tr></thead><tbody><tr><td>App data</td><td>Settings, logins, databases, and saved state.</td><td>Only if you are ready to reset the app.</td></tr><tr><td>Cache</td><td>Temporary files apps can rebuild.</td><td>Usually safe, but the app may load slower next time.</td></tr><tr><td>Downloads</td><td>Files saved from browsers, transfer tools, and installers.</td><td>Review first, then delete duplicates and old APKs.</td></tr><tr><td>USB or SD card</td><td>Removable media, backups, videos, documents.</td><td>Yes, but confirm files are backed up.</td></tr></tbody></table></div></section>
-    <section class="page-section"><h2>Best practice</h2><p>Keep apps and app data on internal storage when possible, and keep large personal media on external storage. Use a file manager such as <a href="orvexa-files.html">Orvexa Files</a> to review Downloads and APK folders before clearing space.</p></section>
-  </div></main>
-  <footer role="contentinfo"><p>&copy; 2026 Orvexa Apps. <a href="tutorials.html">Tutorials</a> | <a href="usb-otg-android-guide.html">USB OTG</a></p></footer>
+  <header class="site-header" role="banner" data-nav>
+    <div class="logo">Orvexa Apps</div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav class="site-nav" role="navigation" aria-label="Article navigation"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><a href="orvexa-files.html">Orvexa Files</a><a href="troubleshooting.html">Help</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main id="main">
+    <div class="container page-shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><a href="tutorials.html">Tutorials</a><span>Internal vs external storage</span></nav>
+      <header class="page-header">
+        <div class="eyebrow">Storage Education</div>
+        <h1>Internal vs external storage on Android, Android TV, and Fire TV</h1>
+        <p class="page-lead">Android storage terms can be confusing. Internal storage, shared storage, removable USB, cache, and app data all behave differently when you browse, clean, or transfer files.</p>
+      </header>
+      <div class="article-layout">
+        <article>
+          <section class="page-section">
+            <h2>Introduction</h2>
+<p>Android uses storage language that sounds simple but hides important details. Internal storage is the built-in space used by the system, apps, app data, cache, downloads, and often your local media. External storage can mean shared user-accessible folders on the same internal chip, or it can mean removable media such as a USB drive or SD card. Android TV adds another layer because some devices expose USB storage clearly while others hide it behind system menus.</p><p>Understanding these areas helps you make better cleanup decisions. Deleting a video from Movies is very different from clearing app data. Moving a playlist file to USB is different from moving an installed app. If you know which type of storage you are viewing, you are less likely to delete something important or wonder why freeing space on a USB drive did not fix an internal update error.</p>
+          </section>
+          <section class="page-section">
+            <h2>Step-by-step storage review</h2>
+<ol class="steps"><li>Open Android settings and review the storage summary before using a file manager.</li><li>Identify whether the problem is internal storage, removable USB storage, or a specific app using too much space.</li><li>Use a file manager to inspect user folders such as Downloads, Movies, Music, Documents, APKs, and transfer folders.</li><li>Treat app data carefully. Clear cache first when troubleshooting; clear data only when you accept a reset for that app.</li><li>Move personal media to USB storage when supported, but keep apps and active app data on internal storage unless the device explicitly supports moving them.</li><li>After cleanup, restart the device so storage views and app indexing refresh.</li></ol>
+          </section>
+          <section class="page-section">
+            <h2>Storage types explained</h2>
+<div class="comparison-table"><table><thead><tr><th>Storage area</th><th>What it contains</th><th>Cleanup advice</th></tr></thead><tbody><tr><td>App data</td><td>Logins, settings, databases, downloads, and saved state.</td><td>Clear only when you are ready to reset that app.</td></tr><tr><td>Cache</td><td>Temporary files apps can rebuild.</td><td>Usually safe to clear for problem apps.</td></tr><tr><td>Downloads</td><td>Files saved from browsers, transfer tools, and installers.</td><td>Review often and remove old APKs or duplicates.</td></tr><tr><td>USB or SD card</td><td>Removable media, backups, documents, and videos.</td><td>Good for personal files, but not a replacement for internal update space.</td></tr></tbody></table></div>
+          </section>
+          <section class="page-section">
+            <h2>Common mistakes</h2>
+<div class="grid"><article class="feature-box"><h3>Freeing the wrong storage</h3><p class="text-small">Deleting USB files may not help when Android needs internal space.</p></article><article class="feature-box"><h3>Clearing app data casually</h3><p class="text-small">App data is not junk. It can include saved settings and offline content.</p></article><article class="feature-box"><h3>Using Downloads as an archive</h3><p class="text-small">Downloads should be reviewed, not used as permanent long-term storage.</p></article><article class="feature-box"><h3>Ignoring file-system limits</h3><p class="text-small">USB drives formatted differently may behave differently on TV devices.</p></article></div>
+          </section>
+          <section class="page-section">
+            <h2>Safety recommendations</h2>
+<p>Back up personal files before moving or deleting them. Keep large personal media on removable storage if your device handles it reliably, but do not depend on a single USB drive for important files. If a folder belongs to an app you still use, research it before deleting. For shared TVs, create simple folder names so everyone can recognize what is safe to remove.</p>
+          </section>
+          <section class="page-section">
+            <h2>Troubleshooting</h2>
+<div class="faq-list"><details open><summary>I freed USB space but updates still fail</summary><p>Updates usually require internal storage. Remove old downloads, APKs, cache, or unused apps from internal storage.</p></details><details><summary>A folder reappears after deletion</summary><p>An app may recreate it automatically. Check the app settings and identify what the folder is used for.</p></details><details><summary>USB storage is visible in settings but not in an app</summary><p>The app may need storage permission or may use a picker that does not expose every USB location.</p></details></div>
+          </section>
+          <section class="page-section" id="faq">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-list"><details open>
+              <summary>Is external storage always removable?</summary>
+              <p>No. Android sometimes uses external storage to mean shared user-accessible storage, even when it is physically internal.</p>
+            </details>
+            <details>
+              <summary>Can I move apps to USB on Android TV?</summary>
+              <p>Only on devices and Android versions that explicitly support it. Many TV devices still need apps on internal storage.</p>
+            </details>
+            <details>
+              <summary>Is cache safe to delete?</summary>
+              <p>Usually yes, but clear it selectively. The app may load more slowly while it rebuilds cache.</p>
+            </details>
+            <details>
+              <summary>What belongs on USB storage?</summary>
+              <p>Personal videos, music, documents, backups, and playlist files are good candidates when the device reads the drive reliably.</p>
+            </details></div>
+          </section>
+          <section class="page-section">
+            <h2>Summary and next steps</h2>
+            <p>Internal storage is for the system, apps, and active data; removable storage is best for personal files and backups. Next, read <a href="usb-otg-android-guide.html">the USB OTG guide</a> or <a href="fix-android-tv-storage-full.html">the storage full cleanup guide</a>.</p>
+          </section>
+        </article>
+        <aside class="article-sidebar info-panel">
+          <h2>Related guides</h2>
+          <ul class="link-list"><li><a href="usb-otg-android-guide.html">How USB OTG works</a></li>
+              <li><a href="fix-android-tv-storage-full.html">Fix storage full issues</a></li>
+              <li><a href="safely-delete-junk-files-android.html">Safely delete junk files</a></li>
+              <li><a href="orvexa-files.html">Orvexa Files app page</a></li>
+              <li><a href="android-file-permissions-explained.html">Android file permissions explained</a></li></ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo">
+    <div class="footer-sitemap" aria-label="Footer navigation">
+      <div>
+        <p class="footer-heading">Company</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Tutorials</p>
+        <div class="footer-links">
+          <a href="tutorials.html">Tutorial Hub</a>
+          <a href="transfer-files-android-tv.html">Transfer Files</a>
+          <a href="install-apk-safely.html">APK Safety</a>
+          <a href="fix-android-tv-storage-full.html">Storage Help</a>
+          <a href="speed-up-android-tv.html">Performance</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Video Guides</p>
+        <div class="footer-links">
+          <a href="orvexa-files-demo-video.html">Files Demo</a>
+          <a href="android-tv-storage-fix-video.html">Storage Fix</a>
+          <a href="stop-background-apps-android-tv-video.html">Background Apps</a>
+          <a href="orvexa-tv-demo-video.html">Orvexa TV Demo</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-heading">Apps</p>
+        <div class="footer-links">
+          <a href="orvexa-share.html">Orvexa Share</a>
+          <a href="orvexa-files.html">Orvexa Files</a>
+          <a href="files-pro.html">Orvexa Files Pro</a>
+          <a href="media-player.html">Media Player</a>
+          <a href="orvexa-radio.html">Orvexa Radio</a>
+          <a href="orvexa-tv.html">Orvexa TV</a>
+        </div>
+      </div>
+    </div>
+    <p>&copy; 2026 Orvexa Apps. All rights reserved.</p>
+  </footer>
   <script src="assets/js/navigation.js" defer></script>
 </body>
 </html>
