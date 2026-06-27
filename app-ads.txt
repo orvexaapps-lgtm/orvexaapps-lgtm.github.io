@@ -140,3 +140,8 @@ adorphic.com, 4051, reseller
 triplelift.com, 13567, reseller, 6c33edb13117fd86
 zetaglobal.net, 748, reseller
 themediagrid.com, godnc4, reseller, 9fac4a4a87c2a44f
+smartadserver.com, 3554, reseller
+sharethrough.com, 3554, reseller, d53b998a7bd4ecd2
+onlinemediasolutions.com, 43301, reseller, b3868b187e4b6402
+onomagic.com, 43301, reseller
+brightcom.com, 43301, reseller
